@@ -161,11 +161,11 @@
 								<form action="#" class="catalog-filter__form">
 									<div class="catalog-filter__holder">
 										<div class="catalog-filter__top">
+											<h3 class="catalog-filter__title">Фильтры</h3>
 											<button class="catalog-filter__close">
 												<svg>
 													<use xlink:href="img/sprite.svg#icon-close"></use>
 												</svg>
-												<span>Скрыть</span>
 											</button>
 										</div>
 										<div class="catalog-filter__main">
@@ -334,66 +334,109 @@
 													</div>
 												</div>
 											</div>
-											<!-- <div class="catalog-filter__block">
-                                                <div class="catalog-filter__topping">
-                                                    <h3 class="catalog-filter__heading">Цена</h3>
-                                                </div>
-                                                <div class="catalog-filter__range">
-                                                    <div class="catalog-filter__range-inner">
-                                                        <div class="range-field">
-                                                            <span class="range-field__help">От</span>
-                                                            <input type="number" id="range-money-min" class="range-field__input range-field__input--min" placeholder="0">
-                                                        </div>
-                                                        <div class="range-field">
-                                                            <span class="range-field__help">До</span>
-                                                            <input type="number" id="range-money-max" class="range-field__input range-field__input--max" placeholder="50000">
-                                                        </div>
-                                                    </div>
-                                                    <div class="catalog-filter__range-slider" data-range-start="423" data-range-end="44504" data-range-min="0" data-range-max="50000"></div>
-                                                </div>
-                                            </div>
-                                            <div class="catalog-filter__block">
-                                                <div class="catalog-filter__topping">
-                                                    <h3 class="catalog-filter__heading">Бренд</h3>
-                                                    <button class="catalog-filter__reset">Сбросить</button>
-                                                </div>
-                                                <div class="catalog-filter__scroll">
-                                                    <div class="catalog-filter__checkboxes">
-                                                        <div class="square-checkbox catalog-filter__checkbox">
-                                                            <input type="checkbox" class="square-checkbox__input" id="filter-group-01">
-                                                            <label for="filter-group-01" class="square-checkbox__group">
-                                                                <span class="square-checkbox__icon"></span>
-                                                                <span class="square-checkbox__title">Ветки деревьев</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="square-checkbox catalog-filter__checkbox">
-                                                            <input type="checkbox" class="square-checkbox__input" id="filter-group-02" disabled>
-                                                            <label for="filter-group-02" class="square-checkbox__group">
-                                                                <span class="square-checkbox__icon"></span>
-                                                                <span class="square-checkbox__title">Газонные коврики/мох</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="square-checkbox catalog-filter__checkbox">
-                                                            <input type="checkbox" class="square-checkbox__input" id="filter-group-03">
-                                                            <label for="filter-group-03" class="square-checkbox__group">
-                                                                <span class="square-checkbox__icon"></span>
-                                                                <span class="square-checkbox__title">Горшечные растения</span>
-                                                            </label>
-                                                        </div>
-                                                        <div class="square-checkbox catalog-filter__checkbox">
-                                                            <input type="checkbox" class="square-checkbox__input" id="filter-group-04">
-                                                            <label for="filter-group-04" class="square-checkbox__group">
-                                                                <span class="square-checkbox__icon"></span>
-                                                                <span class="square-checkbox__title">Кактусы</span>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> -->
+											<div class="catalog-filter__block">
+												<div class="catalog-filter__topping">
+													<h3 class="catalog-filter__heading">Цена</h3>
+												</div>
+												<div class="catalog-filter__range">
+													<div class="catalog-filter__range-inner">
+														<div class="range-field catalog-filter__range-input">
+															<div class="range-field__group">
+																<span class="range-field__help">от</span>
+																<input type="number" id="range-money-min" class="range-field__input range-field__input--min" placeholder="0">
+															</div>
+															<div class="range-field__group">
+																<span class="range-field__help">до</span>
+																<input type="number" id="range-money-max" class="range-field__input range-field__input--max" placeholder="1000">
+															</div>
+														</div>
+													</div>
+													<div class="catalog-filter__range-slider" data-range-start="0" data-range-end="800" data-range-min="0" data-range-max="1000"></div>
+												</div>
+											</div>
+											<div class="catalog-filter__block">
+												<div class="catalog-filter__topping">
+													<h3 class="catalog-filter__heading">Бренд</h3>
+													<button class="catalog-filter__reset">Сбросить</button>
+												</div>
+												<div class="catalog-filter__scroll">
+													<div class="catalog-filter__group">
+														<div class="c-search catalog-filter__search">
+															<div class="c-search__form">
+																<input type="text" class="c-search__input" placeholder="Поиск">
+																<button class="c-search__btn" aria-label="Поиск">
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-search"></use>
+																	</svg>
+																</button>
+															</div>
+														</div>
+													</div>
+													<div class="catalog-filter__group">
+														<span class="catalog-filter__letter">A</span>
+														<div class="catalog-filter__checkboxes">
+															<div class="square-checkbox catalog-filter__checkbox">
+																<input type="checkbox" class="square-checkbox__input" id="filter-brand-01">
+																<label for="filter-brand-01" class="square-checkbox__group">
+																	<span class="square-checkbox__icon"></span>
+																	<span class="square-checkbox__title">Аnovartis Pharma</span>
+																</label>
+															</div>
+															<div class="square-checkbox catalog-filter__checkbox">
+																<input type="checkbox" class="square-checkbox__input" id="filter-brand-02">
+																<label for="filter-brand-02" class="square-checkbox__group">
+																	<span class="square-checkbox__icon"></span>
+																	<span class="square-checkbox__title">AstraZeneca</span>
+																</label>
+															</div>
+															<div class="square-checkbox catalog-filter__checkbox">
+																<input type="checkbox" class="square-checkbox__input" id="filter-brand-03">
+																<label for="filter-brand-03" class="square-checkbox__group">
+																	<span class="square-checkbox__icon"></span>
+																	<span class="square-checkbox__title">Astellas Pharma</span>
+																</label>
+															</div>
+															<div class="square-checkbox catalog-filter__checkbox">
+																<input type="checkbox" class="square-checkbox__input" id="filter-brand-04">
+																<label for="filter-brand-04" class="square-checkbox__group">
+																	<span class="square-checkbox__icon"></span>
+																	<span class="square-checkbox__title">Astra</span>
+																</label>
+															</div>
+														</div>
+													</div>
+													<div class="catalog-filter__group">
+														<span class="catalog-filter__letter">B</span>
+														<div class="catalog-filter__checkboxes">
+															<div class="square-checkbox catalog-filter__checkbox">
+																<input type="checkbox" class="square-checkbox__input" id="filter-brand-11">
+																<label for="filter-brand-11" class="square-checkbox__group">
+																	<span class="square-checkbox__icon"></span>
+																	<span class="square-checkbox__title">Bayer</span>
+																</label>
+															</div>
+															<div class="square-checkbox catalog-filter__checkbox">
+																<input type="checkbox" class="square-checkbox__input" id="filter-brand-12">
+																<label for="filter-brand-12" class="square-checkbox__group">
+																	<span class="square-checkbox__icon"></span>
+																	<span class="square-checkbox__title">Bayer Pharma</span>
+																</label>
+															</div>
+															<div class="square-checkbox catalog-filter__checkbox">
+																<input type="checkbox" class="square-checkbox__input" id="filter-brand-13">
+																<label for="filter-brand-13" class="square-checkbox__group">
+																	<span class="square-checkbox__icon"></span>
+																	<span class="square-checkbox__title">BastraZeneca</span>
+																</label>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
 										</div>
 									</div>
 									<div class="catalog-filter__controls">
-										<button class="catalog-filter__btn btn btn--light">Сбросить</button>
+										<button class="catalog-filter__btn catalog-filter__btn--reset btn btn--light">Сбросить</button>
 										<button class="catalog-filter__btn btn">Применить</button>
 									</div>
 								</form>
@@ -432,6 +475,16 @@
 										</button>
 									</div>
 								</div>
+							</div>
+							<div class="catalog-filtered catalog__filtered">
+								<ul class="catalog-filtered__list">
+									<li class="catalog-filtered__item">
+										<div class="catalog-filtered__tag">
+											<span>asdada</span>
+											<button class="catalog-filtered__close"></button>
+										</div>
+									</li>
+								</ul>
 							</div>
 							<div class="catalog__wrapper">
 								<article class="catalog__item catalog-card">
@@ -653,7 +706,7 @@
 									</li>
 									<li class="catalog-categories__item">
 										<button class="catalog-categories__tag">
-											<span>asdada</span>
+											<span>Витамины для осени</span>
 											<svg>
 												<use xlink:href="img/sprite.svg#icon-close"></use>
 											</svg>
@@ -661,15 +714,7 @@
 									</li>
 									<li class="catalog-categories__item">
 										<button class="catalog-categories__tag">
-											<span>asdada</span>
-											<svg>
-												<use xlink:href="img/sprite.svg#icon-close"></use>
-											</svg>
-										</button>
-									</li>
-									<li class="catalog-categories__item">
-										<button class="catalog-categories__tag">
-											<span>asdada</span>
+											<span>Витамины для зимы</span>
 											<svg>
 												<use xlink:href="img/sprite.svg#icon-close"></use>
 											</svg>
