@@ -5,11 +5,11 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>АПТЕКА ADEL - Поиск товаров</title>
-	<meta property="og:title" content="АПТЕКА ADEL - Поиск товаров">
+	<title>АПТЕКА ADEL - Корзина</title>
+	<meta property="og:title" content="АПТЕКА ADEL - Корзина">
 	<meta property="og:description" content="Описание">
 	<meta property="og:url" content="/">
-	<meta property="og:site_name" content="АПТЕКА ADEL - Поиск товаров">
+	<meta property="og:site_name" content="АПТЕКА ADEL - Корзина">
 	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
@@ -1903,7 +1903,7 @@
 						</div>
 						<div class="header-search header__search">
 							<form action="#" class="header-search__form">
-								<input type="text" class="header-search__input" placeholder="Начать поиск" value="Антибиотик">
+								<input type="text" class="header-search__input" placeholder="Начать поиск" value="">
 								<div class="header-search__controls">
 									<button class="header-search__btn-search">Найти</button>
 									<button class="header-search__clear" aria-label="Очистить">
@@ -2060,8 +2060,8 @@
 		<!-- end of header -->
 		<!-- content -->
 		<div class="wrapper__content">
-			<!-- catalog -->
-			<section class="catalog" id="catalog">
+			<!-- basket -->
+			<section class="basket" id="basket">
 				<div class="container">
 					<div class="page-top">
 						<div class="breadcrumb page-top__breadcrumb" aria-label="Breadcrumb">
@@ -2070,400 +2070,411 @@
 									<a href="index.html" class="breadcrumb__link">Главная</a>
 								</li>
 								<li class="breadcrumb__item">
-									<a href="catalog.html" class="breadcrumb__link">Каталог</a>
-								</li>
-								<li class="breadcrumb__item">
-									<a href="category.html" class="breadcrumb__link">Лекарственные препараты</a>
+									<a href="basket.html" class="breadcrumb__link">Корзина</a>
 								</li>
 							</ol>
 							<select class="breadcrumb__select" onchange="if (this.value) window.location.href = this.value">
-								<option value="">Лекарственные препараты</option>
+								<option value="">Корзина</option>
 								<option value="index.html">Главная</option>
-								<option value="catalog.html">Каталог</option>
 							</select>
 						</div>
 						<div class="page-top__inner">
-							<h2 class="page-top__heading">Поиск товаров <small><span>17</span> товаров найдено</small></h2>
+							<h2 class="page-top__heading">Корзина</h2>
+							<a href="#" class="page-top__link">Очистить корзину</a>
 						</div>
 					</div>
-					<div class="catalog__wrap">
-						<div class="catalog__left">
-							<div class="catalog-filter">
-								<form action="#" class="catalog-filter__form">
-									<div class="catalog-filter__holder">
-										<div class="catalog-filter__top">
-											<h3 class="catalog-filter__title">Фильтры</h3>
-											<button class="catalog-filter__close">
-												<svg>
-													<use xlink:href="img/sprite.svg#icon-close"></use>
-												</svg>
-											</button>
-										</div>
-										<div class="catalog-filter__main">
-											<div class="catalog-filter__block">
-												<div class="catalog-filter__switches">
-													<label for="switch-hit" class="switch catalog-filter__switch">
-														<input type="checkbox" id="switch-hit" class="switch__input">
-														<div class="switch__group">
-															<span class="switch__title">Хит недели</span>
-															<span class="switch__icon"></span>
-														</div>
-													</label>
-													<label for="switch-discount" class="switch catalog-filter__switch">
-														<input type="checkbox" id="switch-discount" class="switch__input">
-														<div class="switch__group">
-															<span class="switch__title">На скидке</span>
-															<span class="switch__icon"></span>
-														</div>
-													</label>
-													<label for="switch-recipe" class="switch catalog-filter__switch">
-														<input type="checkbox" id="switch-recipe" class="switch__input">
-														<div class="switch__group">
-															<span class="switch__title">Без рецепта</span>
-															<span class="switch__icon"></span>
-														</div>
-													</label>
-												</div>
-											</div>
-											<div class="catalog-filter__block">
-												<div class="catalog-filter__topping">
-													<h3 class="catalog-filter__heading">Способ доставки</h3>
-												</div>
-												<div class="catalog-filter__scroll">
-													<div class="catalog-filter__checkboxes">
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-delivery-01">
-															<label for="filter-delivery-01" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Курьером до двери</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-delivery-02">
-															<label for="filter-delivery-02" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Самовывоз из аптеки</span>
-															</label>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="catalog-filter__block">
-												<div class="catalog-filter__topping">
-													<h3 class="catalog-filter__heading">Производство</h3>
-												</div>
-												<div class="catalog-filter__scroll">
-													<div class="catalog-filter__checkboxes">
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-group-01">
-															<label for="filter-group-01" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Беларусь</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-group-02" disabled>
-															<label for="filter-group-02" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Пакистан</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-group-03">
-															<label for="filter-group-03" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Россия</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-group-04">
-															<label for="filter-group-04" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Франция</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-group-05">
-															<label for="filter-group-05" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Нидерланды</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-group-06">
-															<label for="filter-group-06" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Германия</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-group-07">
-															<label for="filter-group-07" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Китай</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-group-08">
-															<label for="filter-group-08" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Финляндия</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-group-09">
-															<label for="filter-group-09" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">США</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-group-10">
-															<label for="filter-group-10" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Индия</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-group-11">
-															<label for="filter-group-11" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Вьетнам</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-group-12">
-															<label for="filter-group-12" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Бразилия</span>
-															</label>
-														</div>
-													</div>
-													<a href="#" class="catalog-filter__more">Показать все 22</a>
-												</div>
-											</div>
-											<div class="catalog-filter__block">
-												<div class="catalog-filter__topping">
-													<h3 class="catalog-filter__heading">Наличие</h3>
-												</div>
-												<div class="catalog-filter__scroll">
-													<div class="catalog-filter__checkboxes">
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-availability-01">
-															<label for="filter-availability-01" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Есть в наличии</span>
-															</label>
-														</div>
-														<div class="square-checkbox catalog-filter__checkbox">
-															<input type="checkbox" class="square-checkbox__input" id="filter-availability-02">
-															<label for="filter-availability-02" class="square-checkbox__group">
-																<span class="square-checkbox__icon"></span>
-																<span class="square-checkbox__title">Предзаказ со склада</span>
-															</label>
-														</div>
-													</div>
-												</div>
-											</div>
-											<div class="catalog-filter__block">
-												<div class="catalog-filter__topping">
-													<h3 class="catalog-filter__heading">Цена</h3>
-												</div>
-												<div class="catalog-filter__range">
-													<div class="catalog-filter__range-inner">
-														<div class="range-field catalog-filter__range-input">
-															<div class="range-field__group">
-																<span class="range-field__help">от</span>
-																<input type="number" id="range-money-min" class="range-field__input range-field__input--min" placeholder="0">
-															</div>
-															<div class="range-field__group">
-																<span class="range-field__help">до</span>
-																<input type="number" id="range-money-max" class="range-field__input range-field__input--max" placeholder="1000">
-															</div>
-														</div>
-													</div>
-													<div class="catalog-filter__range-slider" data-range-start="0" data-range-end="800" data-range-min="0" data-range-max="1000"></div>
-												</div>
-											</div>
-											<div class="catalog-filter__block">
-												<div class="catalog-filter__topping">
-													<h3 class="catalog-filter__heading">Бренд</h3>
-													<button class="catalog-filter__reset">Сбросить</button>
-												</div>
-												<div class="catalog-filter__scroll">
-													<div class="catalog-filter__group">
-														<div class="c-search catalog-filter__search">
-															<div class="c-search__form">
-																<input type="text" class="c-search__input" placeholder="Поиск">
-																<button class="c-search__btn" aria-label="Поиск">
-																	<svg>
-																		<use xlink:href="img/sprite.svg#icon-search"></use>
-																	</svg>
-																</button>
-															</div>
-														</div>
-													</div>
-													<div class="catalog-filter__group">
-														<span class="catalog-filter__letter">A</span>
-														<div class="catalog-filter__checkboxes">
-															<div class="square-checkbox catalog-filter__checkbox">
-																<input type="checkbox" class="square-checkbox__input" id="filter-brand-01">
-																<label for="filter-brand-01" class="square-checkbox__group">
-																	<span class="square-checkbox__icon"></span>
-																	<span class="square-checkbox__title">Аnovartis Pharma</span>
-																</label>
-															</div>
-															<div class="square-checkbox catalog-filter__checkbox">
-																<input type="checkbox" class="square-checkbox__input" id="filter-brand-02">
-																<label for="filter-brand-02" class="square-checkbox__group">
-																	<span class="square-checkbox__icon"></span>
-																	<span class="square-checkbox__title">AstraZeneca</span>
-																</label>
-															</div>
-															<div class="square-checkbox catalog-filter__checkbox">
-																<input type="checkbox" class="square-checkbox__input" id="filter-brand-03">
-																<label for="filter-brand-03" class="square-checkbox__group">
-																	<span class="square-checkbox__icon"></span>
-																	<span class="square-checkbox__title">Astellas Pharma</span>
-																</label>
-															</div>
-															<div class="square-checkbox catalog-filter__checkbox">
-																<input type="checkbox" class="square-checkbox__input" id="filter-brand-04">
-																<label for="filter-brand-04" class="square-checkbox__group">
-																	<span class="square-checkbox__icon"></span>
-																	<span class="square-checkbox__title">Astra</span>
-																</label>
-															</div>
-														</div>
-													</div>
-													<div class="catalog-filter__group">
-														<span class="catalog-filter__letter">B</span>
-														<div class="catalog-filter__checkboxes">
-															<div class="square-checkbox catalog-filter__checkbox">
-																<input type="checkbox" class="square-checkbox__input" id="filter-brand-11">
-																<label for="filter-brand-11" class="square-checkbox__group">
-																	<span class="square-checkbox__icon"></span>
-																	<span class="square-checkbox__title">Bayer</span>
-																</label>
-															</div>
-															<div class="square-checkbox catalog-filter__checkbox">
-																<input type="checkbox" class="square-checkbox__input" id="filter-brand-12">
-																<label for="filter-brand-12" class="square-checkbox__group">
-																	<span class="square-checkbox__icon"></span>
-																	<span class="square-checkbox__title">Bayer Pharma</span>
-																</label>
-															</div>
-															<div class="square-checkbox catalog-filter__checkbox">
-																<input type="checkbox" class="square-checkbox__input" id="filter-brand-13">
-																<label for="filter-brand-13" class="square-checkbox__group">
-																	<span class="square-checkbox__icon"></span>
-																	<span class="square-checkbox__title">BastraZeneca</span>
-																</label>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="catalog-filter__controls">
-										<button class="catalog-filter__btn catalog-filter__btn--reset btn btn--light">Сбросить</button>
-										<button class="catalog-filter__btn btn">Применить</button>
-									</div>
-								</form>
-							</div>
-						</div>
-						<div class="catalog__right">
-							<div class="catalog-sort catalog__sort">
-								<div class="catalog-sort__wrapper">
-									<div class="catalog-sort__item catalog-sort__item--sort c-sort">
-										<div class="c-sort__wrapper">
-											<span class="c-sort__title">Сортировать по:</span>
-											<div class="c-sort__controls">
-												<div class="c-sort__btns c-sort-btns">
-													<div class="c-sort-btns__controls">
-														<button class="c-sort-btns__control is--active" data-sort-id="price">Цене</button>
-														<button class="c-sort-btns__control" data-sort-id="popularity">Популярности</button>
-													</div>
-													<div class="c-sort-btns__select">
-														<select>
-															<option value="price:asc">Цене по возрастанию</option>
-															<option value="price:desc">Цене по убыванию</option>
-															<option value="popularity:asc">Популярности по возрастанию</option>
-															<option value="popularity:desc">Популярности по убыванию</option>
-														</select>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="catalog-sort__item catalog-sort__item--filter c-filter-trigger">
-										<button class="c-filter-trigger__btn">
-											<svg>
-												<use xlink:href="img/sprite.svg#icon-filter"></use>
-											</svg>
-											<span>фильтр</span>
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="catalog-filtered catalog__filtered">
-								<div class="catalog-filtered__wrapper">
-									<div class="catalog-filtered__scroll">
-										<div class="catalog-filtered__list">
-											<div class="catalog-filtered__tag">
-												<span>от <span class="number">73</span> р.</span>
-												<button class="catalog-filtered__delete">
-													<svg>
-														<use xlink:href="img/sprite.svg#icon-close"></use>
-													</svg>
-												</button>
-											</div>
-											<div class="catalog-filtered__tag">
-												<span>Активный фильтр</span>
-												<button class="catalog-filtered__delete">
-													<svg>
-														<use xlink:href="img/sprite.svg#icon-close"></use>
-													</svg>
-												</button>
-											</div>
-											<div class="catalog-filtered__tag">
-												<span>Беларусь</span>
-												<button class="catalog-filtered__delete">
-													<svg>
-														<use xlink:href="img/sprite.svg#icon-close"></use>
-													</svg>
-												</button>
-											</div>
-										</div>
-									</div>
-									<button class="catalog-filtered__clear">
+					<div class="basket__wrap">
+						<div class="basket__left">
+							<div class="basket__wrapper">
+								<div class="basket__item">
+									<button class="basket__delete" aria-label="Удалить">
 										<svg>
 											<use xlink:href="img/sprite.svg#icon-close"></use>
 										</svg>
 									</button>
+									<a href="#" class="basket__img">
+										<img src="img/catalog-01.png" alt="Image">
+									</a>
+									<div class="basket__body">
+										<a href="#" class="basket__title">Аква марис (эктоин спрей назальный 20 мл ) Jadran Galenski Laboratorij D. D.</a>
+										<span class="basket__help">Производство: Хорватия</span>
+										<div class="basket__info">
+											<div class="basket__block">
+												<div class="basket__inner">
+													<span class="basket__elem">Срок годности: 12 месяцев</span>
+													<span class="basket__elem">Остаток: 12 шт</span>
+													<span class="basket__elem basket__elem--red">Продается по рецепту</span>
+												</div>
+											</div>
+											<div class="basket__block basket__block--flex">
+												<div class="c-quantity basket__quantity">
+													<div class="c-quantity__inner">
+														<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+														<input type="number" class="c-quantity__value" value="1">
+														<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+													</div>
+												</div>
+												<div class="basket__prices">
+													<span class="basket__price basket__price--old">83.92 руб.</span>
+													<span class="basket__price basket__price--new">19.52 руб.</span>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-							<!-- if empty -->
-							<div class="catalog-empty catalog__empty">
-								<div class="catalog-empty__wrapper">
-									<div class="catalog-empty__icon">
+								<div class="basket__item">
+									<button class="basket__delete" aria-label="Удалить">
 										<svg>
-											<use xlink:href="img/sprite.svg#icon-filter"></use>
+											<use xlink:href="img/sprite.svg#icon-close"></use>
 										</svg>
+									</button>
+									<a href="#" class="basket__img">
+										<img src="img/catalog-02.png" alt="Image">
+									</a>
+									<div class="basket__body">
+										<a href="#" class="basket__title">Эпиген Спрей для интимной гигиены 60 мл</a>
+										<span class="basket__help">Производство: Хорватия</span>
+										<div class="basket__info">
+											<div class="basket__block">
+												<div class="basket__inner">
+													<span class="basket__elem">Срок годности: 12 месяцев</span>
+													<span class="basket__elem">Остаток: 0 шт</span>
+													<span class="basket__elem basket__elem--red">Нет в наличии</span>
+												</div>
+											</div>
+											<div class="basket__block basket__block--flex">
+												<div class="c-quantity basket__quantity is--disabled">
+													<div class="c-quantity__inner">
+														<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+														<input type="number" class="c-quantity__value" value="0">
+														<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+													</div>
+												</div>
+												<div class="basket__prices">
+													<span class="basket__price basket__price--new">19.52 руб.</span>
+												</div>
+											</div>
+										</div>
 									</div>
-									<div class="catalog-empty__body">
-										<p class="catalog-empty__description">По вашим параметрам ничего не нашлось. Попробуйте сбросить фильтры.</p>
-										<a href="#" class="catalog-empty__link">Сбросить фильтры</a>
+								</div>
+								<div class="basket__item">
+									<button class="basket__delete" aria-label="Удалить">
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-close"></use>
+										</svg>
+									</button>
+									<a href="#" class="basket__img">
+										<img src="img/catalog-03.png" alt="Image">
+									</a>
+									<div class="basket__body">
+										<a href="#" class="basket__title">Аква марис (система 30 пакетов-саше с морской солью ) Jadran Galenski Laboratorij D. D.</a>
+										<span class="basket__help">Производство: Хорватия</span>
+										<div class="basket__info">
+											<div class="basket__block">
+												<div class="basket__inner">
+													<span class="basket__elem">Срок годности: 12 месяцев</span>
+													<span class="basket__elem">Остаток: 4 шт</span>
+												</div>
+											</div>
+											<div class="basket__block basket__block--flex">
+												<div class="c-quantity basket__quantity">
+													<div class="c-quantity__inner">
+														<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+														<input type="number" class="c-quantity__value" value="2">
+														<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+													</div>
+												</div>
+												<div class="basket__prices">
+													<span class="basket__price basket__price--new">123.52 руб.</span>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
-							<!-- end of empty -->
+						</div>
+						<div class="basket__right">
+							<div class="totalinfo">
+								<div class="totalinfo__wrapper">
+									<div class="totalinfo__block">
+										<h3 class="totalinfo__title">Укажите ваши контакты</h3>
+										<div class="totalinfo__form">
+											<div class="input-field totalinfo__input">
+												<div class="input-field__inner">
+													<input type="text" class="input-field__input" placeholder="ФИО">
+												</div>
+											</div>
+											<div class="input-field totalinfo__input">
+												<div class="input-field__inner">
+													<input type="tel" class="input-field__input" placeholder="+375 (__) ___-__-__" data-inputmask="'mask': '+375 (99) 999-99-99'">
+												</div>
+											</div>
+											<div class="input-field totalinfo__input">
+												<div class="input-field__inner">
+													<input type="email" class="input-field__input" placeholder="E-mail">
+												</div>
+											</div>
+											<div class="square-checkbox totalinfo__checkbox">
+												<input type="checkbox" class="square-checkbox__input" id="totalinfo-privacy-policy">
+												<label for="totalinfo-privacy-policy" class="square-checkbox__group">
+													<span class="square-checkbox__icon"></span>
+													<span class="square-checkbox__title">Даю согласие на обработку персональных данных</span>
+												</label>
+											</div>
+										</div>
+									</div>
+									<div class="totalinfo__block">
+										<div class="totalinfo__inner">
+											<span class="totalinfo__help">Сумма товаров:</span>
+											<div class="totalinfo__sum">83.92 руб.</div>
+										</div>
+										<div class="totalinfo__inner">
+											<span class="totalinfo__help">Скидка:</span>
+											<div class="totalinfo__sum">8.3 руб.</div>
+										</div>
+									</div>
+									<div class="totalinfo__block">
+										<div class="totalinfo__inner">
+											<span class="totalinfo__title">Итого:</span>
+											<div class="totalinfo__sum totalinfo__sum--accent">1274.62 руб.</div>
+										</div>
+										<span class="totalinfo__error is--active">Доставка доступна только для заказов от 100 рублей и до 500 рублей.</span>
+										<button class="totalinfo__btn btn btn--lg" disabled>Оформить заказ</button>
+										<div class="totalinfo__inner">
+											<span class="totalinfo__help">Минимальная сумма заказа: <span>30 руб</span>.</span>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end of catalog -->
+			<!-- end of basket -->
+			<!-- similar products content -->
+			<section class="similar-products-content section-indent" id="similar-products-content">
+				<div class="container">
+					<div class="similar-products-content__slider">
+						<div class="similar-products-content__top">
+							<h3 class="similar-products-content__title">Не забудьте добавить к заказу</h3>
+							<div class="swiper-controls similar-products-content__slider-controls">
+								<button class="swiper-button-prev" aria-label="Назад">
+									<svg class="swiper-button-icon">
+										<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+									</svg>
+								</button>
+								<button class="swiper-button-next" aria-label="Далее">
+									<svg class="swiper-button-icon">
+										<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="similar-products-content__slider-wrapper">
+							<div class="swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-01.png" alt="Image">
+												<div class="catalog-card__statuses">
+													<span class="catalog-card__status catalog-card__status--red">Акция</span>
+													<span class="catalog-card__status catalog-card__status--blue">Новинка</span>
+													<span class="catalog-card__status">Хит</span>
+												</div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price catalog-card__price--red"><span>8.09</span> руб.</span>
+														<span class="catalog-card__price catalog-card__price--old"><span>11.20</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">МЕГАСЕФ (пор. д/приг. р-ра д/ин. 750 мг во фл. в комп. с раствор. (вода д/инъекций в амп. 6 мл) №1) Nobelfarma Ilac Sanayii ve Ticaret A.S.-Турция</a>
+													<span class="catalog-card__note">Продается по рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<div class="c-quantity catalog-card__quantity">
+															<div class="c-quantity__inner">
+																<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+																<input type="number" class="c-quantity__value" value="1">
+																<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+															</div>
+														</div>
+														<a href="#" class="catalog-card__btn btn btn--sm btn--icon-mob btn--red">
+															<svg>
+																<use xlink:href="img/sprite.svg#icon-basket"></use>
+															</svg>
+															<span>В корзине</span>
+														</a>
+													</div>
+													<span class="catalog-card__help">Производство: Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">Продается по рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Производство: Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">Продается по рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Производство: Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">Продается по рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Производство: Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">Продается по рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Производство: Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-01.png" alt="Image">
+												<div class="catalog-card__statuses">
+													<span class="catalog-card__status catalog-card__status--red">Акция</span>
+													<span class="catalog-card__status catalog-card__status--blue">Новинка</span>
+													<span class="catalog-card__status">Хит</span>
+												</div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price catalog-card__price--red"><span>8.09</span> руб.</span>
+														<span class="catalog-card__price catalog-card__price--old"><span>11.20</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">МЕГАСЕФ (пор. д/приг. р-ра д/ин. 750 мг во фл. в комп. с раствор. (вода д/инъекций в амп. 6 мл) №1) Nobelfarma Ilac Sanayii ve Ticaret A.S.-Турция</a>
+													<span class="catalog-card__note">Продается по рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<div class="c-quantity catalog-card__quantity">
+															<div class="c-quantity__inner">
+																<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+																<input type="number" class="c-quantity__value" value="1">
+																<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+															</div>
+														</div>
+														<a href="#" class="catalog-card__btn btn btn--sm btn--icon-mob btn--red">
+															<svg>
+																<use xlink:href="img/sprite.svg#icon-basket"></use>
+															</svg>
+															<span>В корзине</span>
+														</a>
+													</div>
+													<span class="catalog-card__help">Производство: Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">Продается по рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Производство: Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end of similar products content -->
 		</div>
 		<!-- end of content -->
 		<!-- footer -->
@@ -5344,6 +5355,239 @@
 		</div>
 	</div>
 	<!-- end of modal city -->
+	<!-- similar products -->
+	<div class="similar-products" id="similar-products">
+		<div class="similar-products__wrap">
+			<div class="similar-products__wrapper similar-products__slider">
+				<div class="similar-products__top">
+					<div class="similar-products__inner">
+						<h3 class="similar-products__heading">Аналоги</h3>
+						<div class="swiper-controls similar-products__controls">
+							<button class="swiper-button-prev" aria-label="Назад">
+								<svg class="swiper-button-icon">
+									<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+								</svg>
+							</button>
+							<button class="swiper-button-next" aria-label="Далее">
+								<svg class="swiper-button-icon">
+									<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<button class="similar-products__close" id="similar-products-close" aria-label="Закрыть">
+						<svg>
+							<use xlink:href="img/sprite.svg#icon-close"></use>
+						</svg>
+					</button>
+				</div>
+				<div class="similar-products__content">
+					<div class="similar-products__slider-wrapper">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<article class="catalog-card similar-products__item">
+										<a href="#" class="catalog-card__img">
+											<img src="img/catalog-01.png" alt="Image">
+											<div class="catalog-card__statuses">
+												<span class="catalog-card__status catalog-card__status--red">Акция</span>
+												<span class="catalog-card__status catalog-card__status--blue">Новинка</span>
+												<span class="catalog-card__status">Хит</span>
+											</div>
+										</a>
+										<div class="catalog-card__body">
+											<div class="catalog-card__group">
+												<div class="catalog-card__prices">
+													<span class="catalog-card__price catalog-card__price--red"><span>8.09</span> руб.</span>
+													<span class="catalog-card__price catalog-card__price--old"><span>11.20</span> руб.</span>
+												</div>
+												<a href="#" class="catalog-card__description">МЕГАСЕФ (пор. д/приг. р-ра д/ин. 750 мг во фл. в комп. с раствор. (вода д/инъекций в амп. 6 мл) №1) Nobelfarma Ilac Sanayii ve Ticaret A.S.-Турция</a>
+												<span class="catalog-card__note">Продается по рецепту</span>
+											</div>
+											<div class="catalog-card__group">
+												<div class="catalog-card__controls">
+													<div class="c-quantity catalog-card__quantity">
+														<div class="c-quantity__inner">
+															<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+															<input type="number" class="c-quantity__value" value="1">
+															<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+														</div>
+													</div>
+													<a href="#" class="catalog-card__btn btn btn--sm btn--icon-mob btn--red">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-basket"></use>
+														</svg>
+														<span>В корзине</span>
+													</a>
+												</div>
+												<span class="catalog-card__help">Производство: Беларусь</span>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="catalog-card similar-products__item">
+										<a href="#" class="catalog-card__img">
+											<img src="img/catalog-03.png" alt="Image">
+											<div class="catalog-card__statuses"></div>
+										</a>
+										<div class="catalog-card__body">
+											<div class="catalog-card__group">
+												<div class="catalog-card__prices">
+													<span class="catalog-card__price"><span>3.66</span> руб.</span>
+												</div>
+												<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+												<span class="catalog-card__note is--active">Продается по рецепту</span>
+											</div>
+											<div class="catalog-card__group">
+												<div class="catalog-card__controls">
+													<a href="#" class="catalog-card__btn btn">В корзину</a>
+												</div>
+												<span class="catalog-card__help">Производство: Беларусь</span>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="catalog-card similar-products__item">
+										<a href="#" class="catalog-card__img">
+											<img src="img/catalog-03.png" alt="Image">
+											<div class="catalog-card__statuses"></div>
+										</a>
+										<div class="catalog-card__body">
+											<div class="catalog-card__group">
+												<div class="catalog-card__prices">
+													<span class="catalog-card__price"><span>3.66</span> руб.</span>
+												</div>
+												<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+												<span class="catalog-card__note is--active">Продается по рецепту</span>
+											</div>
+											<div class="catalog-card__group">
+												<div class="catalog-card__controls">
+													<a href="#" class="catalog-card__btn btn">В корзину</a>
+												</div>
+												<span class="catalog-card__help">Производство: Беларусь</span>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="catalog-card similar-products__item">
+										<a href="#" class="catalog-card__img">
+											<img src="img/catalog-03.png" alt="Image">
+											<div class="catalog-card__statuses"></div>
+										</a>
+										<div class="catalog-card__body">
+											<div class="catalog-card__group">
+												<div class="catalog-card__prices">
+													<span class="catalog-card__price"><span>3.66</span> руб.</span>
+												</div>
+												<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+												<span class="catalog-card__note is--active">Продается по рецепту</span>
+											</div>
+											<div class="catalog-card__group">
+												<div class="catalog-card__controls">
+													<a href="#" class="catalog-card__btn btn">В корзину</a>
+												</div>
+												<span class="catalog-card__help">Производство: Беларусь</span>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="catalog-card similar-products__item">
+										<a href="#" class="catalog-card__img">
+											<img src="img/catalog-03.png" alt="Image">
+											<div class="catalog-card__statuses"></div>
+										</a>
+										<div class="catalog-card__body">
+											<div class="catalog-card__group">
+												<div class="catalog-card__prices">
+													<span class="catalog-card__price"><span>3.66</span> руб.</span>
+												</div>
+												<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+												<span class="catalog-card__note is--active">Продается по рецепту</span>
+											</div>
+											<div class="catalog-card__group">
+												<div class="catalog-card__controls">
+													<a href="#" class="catalog-card__btn btn">В корзину</a>
+												</div>
+												<span class="catalog-card__help">Производство: Беларусь</span>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="catalog-card similar-products__item">
+										<a href="#" class="catalog-card__img">
+											<img src="img/catalog-03.png" alt="Image">
+											<div class="catalog-card__statuses"></div>
+										</a>
+										<div class="catalog-card__body">
+											<div class="catalog-card__group">
+												<div class="catalog-card__prices">
+													<span class="catalog-card__price"><span>3.66</span> руб.</span>
+												</div>
+												<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+												<span class="catalog-card__note is--active">Продается по рецепту</span>
+											</div>
+											<div class="catalog-card__group">
+												<div class="catalog-card__controls">
+													<a href="#" class="catalog-card__btn btn">В корзину</a>
+												</div>
+												<span class="catalog-card__help">Производство: Беларусь</span>
+											</div>
+										</div>
+									</article>
+								</div>
+								<div class="swiper-slide">
+									<article class="catalog-card similar-products__item">
+										<a href="#" class="catalog-card__img">
+											<img src="img/catalog-01.png" alt="Image">
+											<div class="catalog-card__statuses">
+												<span class="catalog-card__status catalog-card__status--red">Акция</span>
+												<span class="catalog-card__status catalog-card__status--blue">Новинка</span>
+												<span class="catalog-card__status">Хит</span>
+											</div>
+										</a>
+										<div class="catalog-card__body">
+											<div class="catalog-card__group">
+												<div class="catalog-card__prices">
+													<span class="catalog-card__price catalog-card__price--red"><span>8.09</span> руб.</span>
+													<span class="catalog-card__price catalog-card__price--old"><span>11.20</span> руб.</span>
+												</div>
+												<a href="#" class="catalog-card__description">МЕГАСЕФ (пор. д/приг. р-ра д/ин. 750 мг во фл. в комп. с раствор. (вода д/инъекций в амп. 6 мл) №1) Nobelfarma Ilac Sanayii ve Ticaret A.S.-Турция</a>
+												<span class="catalog-card__note">Продается по рецепту</span>
+											</div>
+											<div class="catalog-card__group">
+												<div class="catalog-card__controls">
+													<div class="c-quantity catalog-card__quantity">
+														<div class="c-quantity__inner">
+															<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+															<input type="number" class="c-quantity__value" value="1">
+															<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+														</div>
+													</div>
+													<a href="#" class="catalog-card__btn btn btn--sm btn--icon-mob btn--red">
+														<svg>
+															<use xlink:href="img/sprite.svg#icon-basket"></use>
+														</svg>
+														<span>В корзине</span>
+													</a>
+												</div>
+												<span class="catalog-card__help">Производство: Беларусь</span>
+											</div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of similar products -->
 	<!-- scripts -->
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
