@@ -5664,6 +5664,108 @@
 		</div>
 	</div>
 	<!-- end of similar products -->
+	<!-- pharmacy list -->
+	<div class="pharmacy-list" id="pharmacy-list">
+		<div class="pharmacy-list__wrap">
+			<div class="pharmacy-list__top">
+				<h3 class="pharmacy-list__heading">Выберите аптеку самовывоза</h3>
+				<button class="pharmacy-list__close" aria-label="Закрыть">
+					<svg>
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+			<div class="pharmacy-list-filter pharmacy-list__filter">
+				<div class="pharmacy-list-filter__wrapper">
+					<div class="pharmacy-list-filter__elem">
+						<input type="text" class="pharmacy-list-filter__input" placeholder="Найти по адресу или номеру аптеки">
+					</div>
+					<div class="pharmacy-list-filter__elem">
+						<label for="switch-pharmacy-list" class="switch pharmacy-list__switch">
+							<input type="checkbox" id="switch-pharmacy-list" class="switch__input">
+							<div class="switch__group">
+								<span class="switch__icon"></span>
+								<span class="switch__title">На карте</span>
+							</div>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="pharmacy-list-sort pharmacy-list__sort">
+				<div class="pharmacy-list-sort__wrapper">
+					<ul class="pharmacy-list-sort__list">
+						<li class="pharmacy-list-sort__item">
+							<button class="pharmacy-list-sort__btn">
+								<svg>
+									<use xlink:href="img/sprite.svg#icon-adel"></use>
+								</svg>
+								<span>Adel</span>
+							</button>
+						</li>
+						<li class="pharmacy-list-sort__item">
+							<button class="pharmacy-list-sort__btn">
+								<svg>
+									<use xlink:href="img/sprite.svg#icon-dleki"></use>
+								</svg>
+								<span>Dleki</span>
+							</button>
+						</li>
+					</ul>
+					<ul class="pharmacy-list-sort__list">
+						<li class="pharmacy-list-sort__item is--active">
+							<button class="pharmacy-list-sort__btn">
+								<span>Все варианты наличия</span>
+							</button>
+						</li>
+						<li class="pharmacy-list-sort__item">
+							<button class="pharmacy-list-sort__btn">
+								<span>Все в наличии</span>
+							</button>
+						</li>
+						<li class="pharmacy-list-sort__item">
+							<button class="pharmacy-list-sort__btn">
+								<span>Частичное наличие</span>
+							</button>
+						</li>
+						<li class="pharmacy-list-sort__item">
+							<button class="pharmacy-list-sort__btn">
+								<span>Под заказ</span>
+							</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="pharmacy-list__wrapper">
+				<div class="pharmacy-list-card pharmacy-list__item">
+					<div class="pharmacy-list-card__block">
+						<span class="pharmacy-list-card__name">
+							<svg>
+								<use xlink:href="img/sprite.svg#icon-adel"></use>
+							</svg>
+							<span>Аптека №17</span>
+						</span>
+						<span class="pharmacy-list-card__help">ул. Притыцкого, 17А-2</span>
+					</div>
+					<div class="pharmacy-list-card__block"></div>
+					<div class="pharmacy-list-card__block">
+						<div class="pharmacy-list-card__inner">
+							<div class="pharmacy-list-card__group">
+								<span class="pharmacy-list-card__status pharmacy-list-card__status--green">
+									<span>Все в наличии</span>
+								</span>
+								<div class="pharmacy-list-card__elems">
+									<span class="pharmacy-list-card__elem">Аптека: 12 шт</span>
+									<span class="pharmacy-list-card__elem">Склад: 10 шт</span>
+								</div>
+							</div>
+							<a href="#" class="pharmacy-list-card__btn btn btn--light">забрать здесь</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of pharmacy list -->
 	<!-- scripts -->
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
