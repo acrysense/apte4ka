@@ -25,6 +25,20 @@
 <body>
 	<!-- wrapper -->
 	<div class="wrapper">
+		<!-- top notice -->
+		<div class="top-notice" id="top-notice">
+			<div class="container">
+				<div class="top-notice__wrapper">
+					<p class="top-notice__description">31 декабря и 1 января магазины не работают, мы открыты со 2 января без выходных с 10:00 до 21:00. С наступающим Новым годом!</p>
+				</div>
+				<button class="top-notice__close" aria-label="Закрыть">
+					<svg>
+						<use xlink:href="img/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+			</div>
+		</div>
+		<!-- end of top notice -->
 		<!-- header -->
 		<header class="header" id="header">
 			<div class="container">
@@ -47,21 +61,36 @@
 							</div>
 						</div>
 					</div>
+					<div class="c-select header__select">
+						<a href="tel:6838787" class="c-select__selected">
+							<svg>
+								<use xlink:href="img/sprite.svg#icon-phone"></use>
+							</svg>
+							<span><b>683-87-87</b> (МТС, A1, Life)</span>
+						</a>
+						<div class="c-select__dropdown">
+							<ul class="c-select__list">
+								<li class="c-select__item">
+									<a href="tel:7008787" class="c-select__link">
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-phone"></use>
+										</svg>
+										<span><b>700-87-87</b></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<p class="header__pharmacy">Аптека №25 пятой категории ООО "Фарммаркет-плюс"</p>
 					<ul class="header__list">
-						<li class="header__list-item">
-							<a href="#" class="header__link">Страхование</a>
-						</li>
 						<li class="header__list-item">
 							<a href="#" class="header__link">Новости и акции</a>
 						</li>
 						<li class="header__list-item">
-							<a href="#" class="header__link">О нас</a>
-						</li>
-						<li class="header__list-item">
-							<a href="#" class="header__link">Программа лояльности</a>
-						</li>
-						<li class="header__list-item">
 							<a href="#" class="header__link">Партнерские программы</a>
+						</li>
+						<li class="header__list-item">
+							<a href="#" class="header__link">О нас</a>
 						</li>
 						<li class="header__list-item">
 							<a href="#" class="header__link">Найти аптеку</a>
@@ -78,9 +107,8 @@
 							<span class="hamburger__inner"></span>
 							<span class="hamburger__inner"></span>
 						</button>
-						<a href="#" class="header__logotype">
-							<img src="img/logotype.svg" width="255" height="27" alt="АПТЕКА ADEL">
-							<!-- <span>Аптека №25 пятой категории ООО “Фарммаркет-плюс”</span> -->
+						<a href="index.html" class="header__logotype header__logotype--vseleki">
+							<img src="img/logotype.svg" width="238" height="40" alt="vse-leki.by">
 						</a>
 						<div class="c-catalog header__catalog">
 							<button class="c-catalog__trigger">
@@ -1901,7 +1929,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="header-search header__search">
+						<div class="header-search header__search header__search--long">
 							<form action="#" class="header-search__form">
 								<input type="text" class="header-search__input" placeholder="Начать поиск" value="">
 								<div class="header-search__controls">
@@ -2006,14 +2034,6 @@
 								</div>
 							</div>
 						</div>
-						<div class="c-number header__number">
-							<div class="c-number__item">
-								<span class="c-number__icon --life"></span>
-								<span class="c-number__icon --mts"></span>
-								<span class="c-number__icon --velcom"></span>
-								<a href="tel:6838787" class="c-number__link">683-87-87</a>
-							</div>
-						</div>
 						<a href="#" class="c-basket header__basket">
 							<div class="c-basket__group">
 								<svg class="c-basket__icon">
@@ -2051,142 +2071,990 @@
 							<li class="header-nav__item">
 								<a href="#" class="header-nav__link header-nav__link--accent">акции</a>
 							</li>
+							<li class="header-nav__item">
+								<a href="#" class="header-nav__link header-nav__link--accent">САМОВЫВОЗ</a>
+							</li>
 						</ul>
 					</nav>
-					<a href="#" class="header__btn btn btn--border">ДОСТАВКА И САМОВЫВОЗ</a>
 				</div>
 			</div>
 		</header>
 		<!-- end of header -->
 		<!-- content -->
-		<div class="wrapper__content"></div>
-		<!-- end of content -->
-		<!-- footer -->
-		<footer class="footer" id="footer">
-			<div class="container">
-				<div class="footer__wrapper">
-					<div class="footer__block">
-						<a href="index.html" class="footer__logotype">
-							<img src="img/logotype-dark.svg" width="255" height="26" alt="АПТЕКА ADEL">
-						</a>
-						<!-- <p class="footer__copyright">
-                    ООО «Управляющая компания холдинга
-                    «Аптека&nbsp;групп», 2017. Все права защищены.<br>
-                    УНП 191751593<br>
-                    220020, г. Минск, пр-т Победителей, 84, офис 16.
-                </p> -->
-						<p class="footer__copyright">
-							Общество с ограниченной ответственностью "Фарммаркет-плюс"<br>
-							Свидетельство выдано Витебским областным исполнительным комитетом решением от 04 августа 2005 года №535 <br>
-							Юридический адрес:<br>
-							220073, г. Минск, ул. Кальварийская, д.44, пом. 3Н<br>
-							телефон: 80172490005<br>
-							email: fmpfmp5@gmail.com
-							<br><br>
-							Аптека №25 пятой категории по адресу: г. Минск, ул. Янки Брыля, 30-1н.<br>
-							телефон: появится позже<br>
-							email: fmp25@aptphg.by <br>
-							Режим работы Интернет-аптеки: пн-пт 8.00-21.00, сб-вс 10.00-19.00
-						</p>
+		<div class="wrapper__content">
+			<!-- main banners -->
+			<section class="main-banners" id="main-banners">
+				<div class="container">
+					<div class="main-banners__slider">
+						<div class="swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="main-banners__img-link">
+										<picture class="main-banners__img">
+											<source srcset="img/main-bg.jpg" media="(min-width: 768px)">
+											<img src="img/main-bg-mobile.jpg" alt="Image">
+										</picture>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="main-banners__img-link">
+										<picture class="main-banners__img">
+											<source srcset="img/main-bg.jpg" media="(min-width: 768px)">
+											<img src="img/main-bg-mobile.jpg" alt="Image">
+										</picture>
+									</a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="main-banners__img-link">
+										<picture class="main-banners__img">
+											<source srcset="img/main-bg.jpg" media="(min-width: 768px)">
+											<img src="img/main-bg-mobile.jpg" alt="Image">
+										</picture>
+									</a>
+								</div>
+							</div>
+							<button class="swiper-button-prev" aria-label="Назад">
+								<svg class="swiper-button-icon">
+									<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+								</svg>
+							</button>
+							<button class="swiper-button-next" aria-label="Далее">
+								<svg class="swiper-button-icon">
+									<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+								</svg>
+							</button>
+						</div>
 					</div>
-					<div class="footer__block">
-						<div class="c-number footer__elem">
-							<div class="c-number__item">
-								<span class="c-number__icon --life"></span>
-								<span class="c-number__icon --mts"></span>
-								<span class="c-number__icon --velcom"></span>
-								<a href="tel:6838787" class="c-number__link c-number__link--sm">683-87-87</a>
+				</div>
+			</section>
+			<!-- end of main banners -->
+			<!-- pharmacies -->
+			<div class="pharmacies" id="pharmacies">
+				<div class="container">
+					<div class="pharmacies__wrapper">
+						<a href="#" class="pharmacies__item">
+							<img src="img/dleki.svg" width="270" height="53" alt="Добрыя лекi">
+						</a>
+						<a href="#" class="pharmacies__item">
+							<img src="img/logotype.svg" width="338" height="34" alt="АПТЕКА ADEL">
+						</a>
+						<a href="#" class="pharmacies__item">
+							<img src="img/dleki-eco.svg" width="355" height="39" alt="Добрыя лекi ЭКАНОМ">
+						</a>
+					</div>
+				</div>
+			</div>
+			<!-- end of pharmacies -->
+			<!-- product categories -->
+			<section class="product-categories section-indent" id="product-categories">
+				<div class="container">
+					<div class="section-heading">
+						<div class="section-heading__group">
+							<h2 class="section-heading__title">Категории товаров</h2>
+						</div>
+					</div>
+					<div class="product-categories__wrapper">
+						<a href="#" class="product-categories-card product-categories__item">
+							<span class="product-categories-card__name">Лекарства</span>
+							<picture class="product-categories-card__img">
+								<img src="img/categories-01.svg" width="60" height="60" alt="Image">
+							</picture>
+						</a>
+						<a href="#" class="product-categories-card product-categories__item">
+							<span class="product-categories-card__name">Витамины и бады</span>
+							<picture class="product-categories-card__img">
+								<img src="img/categories-02.svg" width="60" height="60" alt="Image">
+							</picture>
+						</a>
+						<a href="#" class="product-categories-card product-categories__item">
+							<span class="product-categories-card__name">Косметика <br>гигиена</span>
+							<picture class="product-categories-card__img">
+								<img src="img/categories-03.svg" width="60" height="60" alt="Image">
+							</picture>
+						</a>
+						<a href="#" class="product-categories-card product-categories__item">
+							<span class="product-categories-card__name">Медицинская <br>техника</span>
+							<picture class="product-categories-card__img">
+								<img src="img/categories-04.svg" width="60" height="60" alt="Image">
+							</picture>
+						</a>
+						<a href="#" class="product-categories-card product-categories__item">
+							<span class="product-categories-card__name">Медицинские изделия</span>
+							<picture class="product-categories-card__img">
+								<img src="img/categories-05.svg" width="60" height="60" alt="Image">
+							</picture>
+						</a>
+						<a href="#" class="product-categories-card product-categories__item">
+							<span class="product-categories-card__name">Оптика</span>
+							<picture class="product-categories-card__img">
+								<img src="img/categories-06.svg" width="60" height="60" alt="Image">
+							</picture>
+						</a>
+						<a href="#" class="product-categories-card product-categories__item">
+							<span class="product-categories-card__name">Средства защиты</span>
+							<picture class="product-categories-card__img">
+								<img src="img/categories-07.svg" width="60" height="60" alt="Image">
+							</picture>
+						</a>
+						<a href="#" class="product-categories-card product-categories__item">
+							<span class="product-categories-card__name">Аптечка</span>
+							<picture class="product-categories-card__img">
+								<img src="img/categories-08.svg" width="60" height="60" alt="Image">
+							</picture>
+						</a>
+						<a href="#" class="product-categories-card product-categories__item">
+							<span class="product-categories-card__name">Здоровье и спорт</span>
+							<picture class="product-categories-card__img">
+								<img src="img/categories-09.svg" width="60" height="60" alt="Image">
+							</picture>
+						</a>
+						<a href="#" class="product-categories-card product-categories__item">
+							<span class="product-categories-card__name">Корейская косметика</span>
+							<picture class="product-categories-card__img">
+								<img src="img/categories-10.svg" width="60" height="60" alt="Image">
+							</picture>
+						</a>
+						<a href="#" class="product-categories-card product-categories__item">
+							<span class="product-categories-card__name">Мама и малыш</span>
+							<picture class="product-categories-card__img">
+								<img src="img/categories-11.svg" width="60" height="60" alt="Image">
+							</picture>
+						</a>
+						<a href="#" class="product-categories-card product-categories__item">
+							<span class="product-categories-card__name">Ортопедия</span>
+							<picture class="product-categories-card__img">
+								<img src="img/categories-13.svg" width="60" height="60" alt="Image">
+							</picture>
+						</a>
+					</div>
+				</div>
+			</section>
+			<!-- end of product categories -->
+			<!-- similar products content -->
+			<section class="similar-products-content section-indent" id="now-in-demand-products">
+				<div class="container">
+					<div class="similar-products-content__slider">
+						<div class="similar-products-content__top">
+							<h3 class="similar-products-content__title">Сейчас пользуются спросом</h3>
+							<div class="swiper-controls similar-products-content__slider-controls">
+								<button class="swiper-button-prev" aria-label="Назад">
+									<svg class="swiper-button-icon">
+										<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+									</svg>
+								</button>
+								<button class="swiper-button-next" aria-label="Далее">
+									<svg class="swiper-button-icon">
+										<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+									</svg>
+								</button>
 							</div>
 						</div>
-						<div class="c-contacts footer__elem">
-							<ul class="c-contacts__list">
-								<li class="c-contacts__item">
-									<a href="mailto:info@apteka-adel.by" class="c-contacts__link">
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-email"></use>
-										</svg>
-										<span>info@apteka-adel.by</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-						<div class="c-socmedia footer__elem">
-							<ul class="c-socmedia__list">
-								<li class="c-socmedia__item">
-									<a href="#" class="c-socmedia__link">
-										<svg class="c-socmedia__icon">
-											<use xlink:href="img/sprite.svg#icon-instagram"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="c-socmedia__item">
-									<a href="#" class="c-socmedia__link">
-										<svg class="c-socmedia__icon">
-											<use xlink:href="img/sprite.svg#icon-vk"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="footer__block">
-						<div class="join-block footer__join">
-							<h3 class="join-block__title">Присоединяйтесь – <a href="#">@apteka_adel</a></h3>
-							<div class="join-block__wrapper">
-								<a href="#" class="join-block__item">
-									<img src="img/join-01.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-02.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-01.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-03.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-02.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-04.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-02.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-05.png" alt="Image">
-								</a>
+						<div class="similar-products-content__slider-wrapper">
+							<div class="swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-01.png" alt="Image">
+												<div class="catalog-card__statuses">
+													<span class="catalog-card__status catalog-card__status--red">Акция</span>
+													<span class="catalog-card__status catalog-card__status--blue">Новинка</span>
+													<span class="catalog-card__status">Хит</span>
+												</div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price catalog-card__price--red"><span>8.09</span> руб.</span>
+														<span class="catalog-card__price catalog-card__price--old"><span>11.20</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">МЕГАСЕФ (пор. д/приг. р-ра д/ин. 750 мг во фл. в комп. с раствор. (вода д/инъекций в амп. 6 мл) №1) Nobelfarma Ilac Sanayii ve Ticaret A.S.-Турция</a>
+													<span class="catalog-card__note">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<div class="c-quantity catalog-card__quantity">
+															<div class="c-quantity__inner">
+																<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+																<input type="number" class="c-quantity__value" value="1">
+																<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+															</div>
+														</div>
+														<a href="#" class="catalog-card__btn btn btn--sm-desktop btn--red">В корзине</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-01.png" alt="Image">
+												<div class="catalog-card__statuses">
+													<span class="catalog-card__status catalog-card__status--red">Акция</span>
+													<span class="catalog-card__status catalog-card__status--blue">Новинка</span>
+													<span class="catalog-card__status">Хит</span>
+												</div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price catalog-card__price--red"><span>8.09</span> руб.</span>
+														<span class="catalog-card__price catalog-card__price--old"><span>11.20</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">МЕГАСЕФ (пор. д/приг. р-ра д/ин. 750 мг во фл. в комп. с раствор. (вода д/инъекций в амп. 6 мл) №1) Nobelfarma Ilac Sanayii ve Ticaret A.S.-Турция</a>
+													<span class="catalog-card__note">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<div class="c-quantity catalog-card__quantity">
+															<div class="c-quantity__inner">
+																<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+																<input type="number" class="c-quantity__value" value="1">
+																<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+															</div>
+														</div>
+														<a href="#" class="catalog-card__btn btn btn--sm-desktop btn--red">В корзине</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="footer__wrapper footer__wrapper--bottom">
-					<ul class="footer__list">
-						<li class="footer__list-item">
-							<a href="#" class="footer__link">Обработка персональных данных</a>
-						</li>
-						<li class="footer__list-item">
-							<a href="#" class="footer__link">Политика cookies</a>
-						</li>
-						<li class="footer__list-item">
-							<a href="#" class="footer__link">Договор оферты</a>
-						</li>
-						<li class="footer__list-item">
-							<a href="https://gospharmnadzor.by/" class="footer__link" target="_blank">Фармацевтический надзор</a>
-						</li>
-					</ul>
-					<ul class="footer__list">
-						<li class="footer__item">
-							<p class="footer__text"><a href="#" target="_blank">Сопровождение проекта – Silentcode</a></p>
-						</li>
-					</ul>
+			</section>
+			<!-- end of similar products content -->
+			<!-- promo -->
+			<div class="promo section-indent" id="promo">
+				<div class="container">
+					<div class="promo__wrapper">
+						<article class="promo-card promo__item" style="background-image: url(img/promo-bg-01.jpg);">
+							<h3 class="promo-card__title">Нужна доставка?</h3>
+							<p class="promo-card__description">Перейдите в наш интернет-магазин и&nbsp;закажите с доставкой. От 100 руб</p>
+							<picture class="promo-card__img">
+								<img src="img/promo-01.png" alt="Image">
+							</picture>
+						</article>
+						<article class="promo-card promo__item" style="background-image: url(img/promo-bg-02.jpg);">
+							<h3 class="promo-card__title">Найти аптеку рядом</h3>
+							<p class="promo-card__description">Самая большая сеть частных аптек. <br>Работаем по всей Беларуси</p>
+							<picture class="promo-card__img">
+								<img src="img/promo-02.png" alt="Image">
+							</picture>
+						</article>
+						<article class="promo-card promo__item" style="background-image: url(img/promo-bg-03.jpg);">
+							<h3 class="promo-card__title">Бронируй и забирай</h3>
+							<p class="promo-card__description">Самовывоз из любой аптеки <br>партнерской сети – мы в паре шагов </p>
+							<picture class="promo-card__img">
+								<img src="img/promo-03.png" alt="Image">
+							</picture>
+						</article>
+					</div>
+				</div>
+			</div>
+			<!-- end of promo -->
+			<!-- similar products content -->
+			<section class="similar-products-content section-indent" id="today-discount-products">
+				<div class="container">
+					<div class="similar-products-content__slider">
+						<div class="similar-products-content__top">
+							<h3 class="similar-products-content__title">Сегодня со скидкой</h3>
+							<div class="swiper-controls similar-products-content__slider-controls">
+								<button class="swiper-button-prev" aria-label="Назад">
+									<svg class="swiper-button-icon">
+										<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+									</svg>
+								</button>
+								<button class="swiper-button-next" aria-label="Далее">
+									<svg class="swiper-button-icon">
+										<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+									</svg>
+								</button>
+							</div>
+						</div>
+						<div class="similar-products-content__slider-wrapper">
+							<div class="swiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-01.png" alt="Image">
+												<div class="catalog-card__statuses">
+													<span class="catalog-card__status catalog-card__status--red">Акция</span>
+													<span class="catalog-card__status catalog-card__status--blue">Новинка</span>
+													<span class="catalog-card__status">Хит</span>
+												</div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price catalog-card__price--red"><span>8.09</span> руб.</span>
+														<span class="catalog-card__price catalog-card__price--old"><span>11.20</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">МЕГАСЕФ (пор. д/приг. р-ра д/ин. 750 мг во фл. в комп. с раствор. (вода д/инъекций в амп. 6 мл) №1) Nobelfarma Ilac Sanayii ve Ticaret A.S.-Турция</a>
+													<span class="catalog-card__note">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<div class="c-quantity catalog-card__quantity">
+															<div class="c-quantity__inner">
+																<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+																<input type="number" class="c-quantity__value" value="1">
+																<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+															</div>
+														</div>
+														<a href="#" class="catalog-card__btn btn btn--sm-desktop btn--red">В корзине</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-01.png" alt="Image">
+												<div class="catalog-card__statuses">
+													<span class="catalog-card__status catalog-card__status--red">Акция</span>
+													<span class="catalog-card__status catalog-card__status--blue">Новинка</span>
+													<span class="catalog-card__status">Хит</span>
+												</div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price catalog-card__price--red"><span>8.09</span> руб.</span>
+														<span class="catalog-card__price catalog-card__price--old"><span>11.20</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">МЕГАСЕФ (пор. д/приг. р-ра д/ин. 750 мг во фл. в комп. с раствор. (вода д/инъекций в амп. 6 мл) №1) Nobelfarma Ilac Sanayii ve Ticaret A.S.-Турция</a>
+													<span class="catalog-card__note">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<div class="c-quantity catalog-card__quantity">
+															<div class="c-quantity__inner">
+																<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+																<input type="number" class="c-quantity__value" value="1">
+																<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+															</div>
+														</div>
+														<a href="#" class="catalog-card__btn btn btn--sm-desktop btn--red">В корзине</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+									<div class="swiper-slide">
+										<article class="catalog-card similar-products-content__item">
+											<a href="#" class="catalog-card__img">
+												<img src="img/catalog-03.png" alt="Image">
+												<div class="catalog-card__statuses"></div>
+											</a>
+											<div class="catalog-card__body">
+												<div class="catalog-card__group">
+													<div class="catalog-card__prices">
+														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+													</div>
+													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+													<span class="catalog-card__note is--active">По рецепту</span>
+												</div>
+												<div class="catalog-card__group">
+													<div class="catalog-card__controls">
+														<a href="#" class="catalog-card__btn btn">В корзину</a>
+													</div>
+													<span class="catalog-card__help">Беларусь</span>
+												</div>
+											</div>
+										</article>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end of similar products content -->
+			<!-- news -->
+			<section class="news section-indent" id="news">
+				<div class="container">
+					<div class="section-heading section-heading--border">
+						<h2 class="section-heading__title">Новости и акции</h2>
+						<a href="#" class="section-heading__link">Все новости</a>
+					</div>
+					<div class="news__wrapper">
+						<article class="news-card news__item">
+							<a href="#" class="news-card__img">
+								<img src="img/news-01.jpg" alt="Image">
+							</a>
+							<div class="news-card__body">
+								<span class="news-card__help">24 августа 2023</span>
+								<a href="#" class="news-card__title">Перхоть: вопросы, которыми задается каждый человек, столкнувшийся с этим состоянием</a>
+								<p class="news-card__description">Появление перхоти связано с индивидуальной предрасположенностью, которая может быть унаследована от родителей, хотя на сегодняшний день отвечающие за это гены не установлены. Люди, страдающие от перхоти, в целом более подвержены риску развития кожных воспалений, которые являются одним из факторов появления перхоти и себорейного дерматита.</p>
+							</div>
+						</article>
+						<article class="news-card news__item">
+							<a href="#" class="news-card__img">
+								<img src="img/news-02.jpg" alt="Image">
+							</a>
+							<div class="news-card__body">
+								<span class="news-card__help">22 августа 2023</span>
+								<a href="#" class="news-card__title">Новый бренд Etat Pur – не просто косметика, а совершенная забота о коже</a>
+								<p class="news-card__description">ETAT PUR – это новый бренд минималистичной косметики по уходу за кожей от известной французской компании NAOS. 12 лет назад Жан-Ноэль Торель, основатель компании и создатель концепции экобиологии, мечтал о косметике, которая бы обладала чистыми составами, сохраняла естественное состояние нашей кожи и подходила бы абсолютно всем людям, независимо от возраста, пола, типа и цвета кожи, образа жизни.</p>
+							</div>
+						</article>
+						<article class="news-card news__item">
+							<a href="#" class="news-card__img">
+								<img src="img/news-03.jpg" alt="Image">
+							</a>
+							<div class="news-card__body">
+								<span class="news-card__help">20 августа 2023</span>
+								<a href="#" class="news-card__title">Городское лето и жаркий отпуск. Как ухаживать за кожей</a>
+								<p class="news-card__description">Лето – такое долгожданное и любимое время года для большинства. Хочется не перегружать кожу, даже отказаться от декоративной косметики, но это вовсе не повод совсем забросить уход. В летнем уходе за кожей есть свои тонкости, давайте поговорим об этом сегодня.</p>
+							</div>
+						</article>
+						<article class="news-card news__item">
+							<a href="#" class="news-card__img">
+								<img src="img/news-04.jpg" alt="Image">
+							</a>
+							<div class="news-card__body">
+								<span class="news-card__help">14 августа 2023</span>
+								<a href="#" class="news-card__title">Правильные носки – носки с ослабленной резинкой</a>
+								<p class="news-card__description">Как это часто бывает — к концу рабочего дня мы чувствуем отечность ног. Особенно в той области, где нога подвергается наибольшему давлению резинки от носков. Настоящее избавление от этой проблемы обеспечат носки с ослабленной резинкой.</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- end of news -->
+			<!-- advantages -->
+			<section class="advantages section-indent" id="advantages">
+				<div class="container">
+					<div class="advantages__top">
+						<h2 class="advantages__heading">Наши преимущества</h2>
+						<p class="advantages__description">Аптеки ADEL – крупнейшая в Беларуси сеть аптек. Сегодня она насчитывает более 85 аптек по всей территории РБ. Ежегодно количество аптек увеличивается, что позволяет нам быть ближе к покупателям и сохранять позиции лидера на фармацевтическом рынке страны.</p>
+						<a href="#" class="advantages__btn btn">
+							<span>Найти ближайшую аптеку</span>
+							<svg>
+								<use xlink:href="img/sprite.svg#icon-arrow-more"></use>
+							</svg>
+						</a>
+					</div>
+					<div class="advantages__wrapper">
+						<article class="advantages-card advantages__item">
+							<picture class="advantages-card__icon">
+								<img src="img/advantages-01.svg" alt="Icon">
+							</picture>
+							<div class="advantages-card__body">
+								<h3 class="advantages-card__title">Сервис</h3>
+								<p class="advantages-card__description">Доставка лекарств на дом, самовывоз из ближайшей аптеки</p>
+							</div>
+						</article>
+						<article class="advantages-card advantages__item">
+							<picture class="advantages-card__icon">
+								<img src="img/advantages-02.svg" alt="Icon">
+							</picture>
+							<div class="advantages-card__body">
+								<h3 class="advantages-card__title">Спецпредложения</h3>
+								<p class="advantages-card__description">Наличие широкого перечня акционных товаров и скидок</p>
+							</div>
+						</article>
+						<article class="advantages-card advantages__item">
+							<picture class="advantages-card__icon">
+								<img src="img/advantages-03.svg" alt="Icon">
+							</picture>
+							<div class="advantages-card__body">
+								<h3 class="advantages-card__title">Шаговая доступность</h3>
+								<p class="advantages-card__description">Наши аптеки всегда рядом и располагаются в удобных местах</p>
+							</div>
+						</article>
+						<article class="advantages-card advantages__item">
+							<picture class="advantages-card__icon">
+								<img src="img/advantages-04.svg" alt="Icon">
+							</picture>
+							<div class="advantages-card__body">
+								<h3 class="advantages-card__title">Программа лояльности</h3>
+								<p class="advantages-card__description">Наличие широкого перечня акционных товаров и скидок</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- end of advantages -->
+			<!-- join us -->
+			<section class="join-us section-indent" id="join-us">
+				<div class="container">
+					<h2 class="join-us__heading">Присоединяйтесь – <a href="#">@apteka_adel</a></h2>
+					<div class="join-us__wrapper">
+						<article class="join-us__item">
+							<a href="#" class="join-us__img">
+								<img src="img/join-us-01.jpg" alt="Image">
+							</a>
+						</article>
+						<article class="join-us__item">
+							<a href="#" class="join-us__img">
+								<img src="img/join-us-02.jpg" alt="Image">
+							</a>
+						</article>
+						<article class="join-us__item">
+							<a href="#" class="join-us__img">
+								<img src="img/join-us-03.jpg" alt="Image">
+							</a>
+						</article>
+						<article class="join-us__item">
+							<a href="#" class="join-us__img">
+								<img src="img/join-us-04.jpg" alt="Image">
+							</a>
+						</article>
+						<article class="join-us__item">
+							<a href="#" class="join-us__img">
+								<img src="img/join-us-05.jpg" alt="Image">
+							</a>
+						</article>
+						<article class="join-us__item">
+							<a href="#" class="join-us__img">
+								<img src="img/join-us-06.jpg" alt="Image">
+							</a>
+						</article>
+					</div>
+				</div>
+			</section>
+			<!-- end of join us -->
+		</div>
+		<!-- end of content -->
+		<!-- footer -->
+		<footer class="footer-w" id="footer">
+			<div class="footer-w__main">
+				<div class="container">
+					<div class="footer-w__wrapper">
+						<div class="footer-w__block">
+							<h3 class="footer-w__subtitle">Покупателям</h3>
+							<div class="footer-w__columns">
+								<div class="footer-w__column">
+									<ul class="footer-w__list">
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">Страхование</a>
+										</li>
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">Новости и акции</a>
+										</li>
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">О нас</a>
+										</li>
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">Программа лояльности</a>
+										</li>
+									</ul>
+								</div>
+								<div class="footer-w__column">
+									<ul class="footer-w__list">
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">Партнерские программы</a>
+										</li>
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">Найти аптеку</a>
+										</li>
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">Доставка и самовывоз</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="footer-w__block">
+							<h3 class="footer-w__subtitle">Контакты</h3>
+							<div class="footer-w__contacts">
+								<div class="footer-w__contacts-inner">
+									<span class="footer-w__contacts-elem">Телефон</span>
+									<span class="footer-w__contacts-delimiter"></span>
+									<a href="tel:6838787" class="footer-w__contacts-value"><b>683-87-87</b> (MTC, A1, life)</a>
+								</div>
+								<div class="footer-w__contacts-inner">
+									<span class="footer-w__contacts-elem">Телефон</span>
+									<span class="footer-w__contacts-delimiter"></span>
+									<a href="tel:375445033038" class="footer-w__contacts-value"><b>+375 (44) 503-30-38</b> (A1)</a>
+								</div>
+								<div class="footer-w__contacts-inner">
+									<span class="footer-w__contacts-elem">Эл. почта</span>
+									<span class="footer-w__contacts-delimiter"></span>
+									<a href="mailto:info@apteka-adel.by" class="footer-w__contacts-value">info@apteka-adel.by</a>
+								</div>
+								<div class="footer-w__contacts-inner">
+									<span class="footer-w__contacts-elem">ВКонтакте</span>
+									<span class="footer-w__contacts-delimiter"></span>
+									<a href="#" class="footer-w__contacts-value">@apteka-adel</a>
+								</div>
+								<div class="footer-w__contacts-inner">
+									<span class="footer-w__contacts-elem">Instagram</span>
+									<span class="footer-w__contacts-delimiter"></span>
+									<a href="#" class="footer-w__contacts-value">@apteka-adel</a>
+								</div>
+							</div>
+						</div>
+						<div class="footer-w__block">
+							<h3 class="footer-w__subtitle">Партнерская сеть</h3>
+							<ul class="footer-w__list">
+								<li class="footer-w__list-item">
+									<a href="#" class="footer-w__link">Аптеки ADEL</a>
+								</li>
+								<li class="footer-w__list-item">
+									<a href="#" class="footer-w__link">Аптеки “Добрый лекi”</a>
+								</li>
+								<li class="footer-w__list-item">
+									<a href="#" class="footer-w__link">Аптеки “Добрый лекi эканом”</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<p class="footer-w__description">
+						ООО "Фарммаркет-плюс". Свидетельство выдано Витебским областным исполнительным комитетом решением от 04 августа 2005 года №535. Юридический адрес: 220073, г. Минск, ул. Кальварийская, д.44, пом. 3Н. Tелефон: +375 (17) 249-00-05. Email: fmpfmp5@gmail.com.
+						<br>
+						Аптека №25 пятой категории . Адрес: г. Минск, ул. Янки Брыля, 30-1н. Телефон: +375 (17) 249-00-05. Еmail: fmp25@aptphg.by. Режим работы Интернет-аптеки: пн-пт 8.00-21.00, сб-вс 10.00-19.00
+					</p>
+					<div class="footer-w__inner">
+						<div class="footer-w__elems">
+							<a href="#" class="footer-w__elem">Обработка персональных данных</a>
+							<a href="#" class="footer-w__elem">Политика cookies</a>
+							<a href="#" class="footer-w__elem">Договор оферты</a>
+							<a href="#" class="footer-w__elem">Фармацевтический надзор</a>
+						</div>
+						<picture class="footer-w__payments">
+							<img src="img/paylogos.png" alt="Image">
+						</picture>
+					</div>
+				</div>
+			</div>
+			<div class="footer-w__bottom">
+				<div class="container">
+					<div class="footer-w__wrapper footer-w__wrapper--center">
+						<p class="footer-w__copyright">ООО «Управляющая компания холдинга «Аптека групп»</p>
+						<p class="footer-w__copyright">Разработка и продвижение – <a href="#" target="_blank">Silentcode</a></p>
+					</div>
 				</div>
 			</div>
 		</footer>
 		<!-- end of footer -->
 	</div>
 	<!-- end of wrapper -->
+	<!-- cookies -->
+	<div class="cookies" id="cookies">
+		<div class="cookies__wrap">
+			<div class="cookies__wrapper">
+				<div class="container">
+					<div class="cookies__wrapper-inner">
+						<div class="cookies__left">
+							<h3 class="cookies__title">Обработка файлов cookie</h3>
+						</div>
+						<div class="cookies__right">
+							<div class="cookies__main">
+								<div class="cookies__info">
+									<p class="cookies__description">
+										Наш сайт использует файлы cookie для улучшения пользовательского опыта, сбора статистики и представления персонализированных рекомендаций. Нажав «Принять», вы даете согласие
+										на обработку файлов cookie в соответствии с <a href="#">Политикой обработки файлов cookie</a>.
+									</p>
+								</div>
+								<div class="cookies__dropdown">
+									<div class="cookies__block">
+										<p class="cookies__description">Вы можете настроить удобные для вас файлы cookie, кроме необходимых. Отмена некоторых cookie может повлиять на работоспособность сайта.</p>
+									</div>
+									<div class="cookies__block">
+										<div class="cookies__inner">
+											<h3 class="cookies__title">Необходимые файлы cookie</h3>
+											<label for="switch-necessary-cookies" class="switch catalog-filter__switch">
+												<input type="checkbox" id="switch-necessary-cookies" class="switch__input" checked disabled>
+												<div class="switch__group">
+													<span class="switch__icon"></span>
+												</div>
+											</label>
+										</div>
+										<p class="cookies__description">Эти файлы cookie необходимы для функционирования веб-сайта и не могут быть отключены в наших системах. Вы можете настроить браузер таким образом, чтобы он блокировал эти файлы cookie или уведомлял вас об их использовании, но в таком случае возможно, что некоторые разделы веб-сайта не будут работать.</p>
+									</div>
+									<div class="cookies__block">
+										<div class="cookies__inner">
+											<h3 class="cookies__title">Целевые файлы cookie</h3>
+											<label for="switch-targeting-cookies" class="switch catalog-filter__switch">
+												<input type="checkbox" id="switch-targeting-cookies" class="switch__input" checked>
+												<div class="switch__group">
+													<span class="switch__icon"></span>
+												</div>
+											</label>
+										</div>
+										<p class="cookies__description">Эти файлы cookie настраиваются через наш веб-сайт нашими партнерами. Они могут использоваться для сбора данных о ваших интересах, посещаемых страницах и источниках трафика, чтобы оценивать и улучшать работу нашего веб-сайта. Также файлы cookie нужны для функционирования онлайн-чата и формы «Замена и возврат товара».</p>
+									</div>
+									<div class="cookies__block">
+										<p class="cookies__description cookies__description--grey">Нажимая на кнопку «Принять настройки cookie», вы даёте согласие на обработку файлов cookie в соответствии с <a href="#">Политикой обработки файлов cookie</a>.</p>
+									</div>
+								</div>
+								<div class="cookies__buttons">
+									<a href="#" class="cookies__btn btn btn--border-green" id="cookies-trigger">Настроить</a>
+									<a href="#" class="cookies__btn btn" id="js-cookies-btn">Принять</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end of cookies -->
 	<!-- mobile menu -->
 	<div class="mobile-menu" id="mobile-menu">
 		<div class="mobile-menu__holder mobile-menu__holder--main is--active">
@@ -2197,6 +3065,9 @@
 							<use xlink:href="img/sprite.svg#icon-close"></use>
 						</svg>
 					</button>
+					<a href="index.html" class="mobile-menu__logotype">
+						<img src="img/logotype.svg" width="129" height="30" alt="аптечка+">
+					</a>
 					<div class="mobile-menu__inner">
 						<div class="c-location mobile-menu__location">
 							<a href="#" class="c-location__trigger city-selection-btn">
@@ -2206,14 +3077,84 @@
 								<span>Витебск</span>
 							</a>
 						</div>
-						<div class="c-user mobile-menu__user">
-							<a href="#" class="c-user__trigger">
-								<picture class="c-user__img">
-									<img src="img/user.svg" alt="Image">
-								</picture>
-								<span class="c-user__name">Мой кабинет</span>
-							</a>
+						<!-- <div class="c-user mobile-menu__user">
+                        <a href="#" class="c-user__trigger">
+                            <picture class="c-user__img">
+                                <img src="img/user.svg" alt="Image">
+                            </picture>
+                            <span class="c-user__name">Мой кабинет</span>
+                        </a>
+                    </div> -->
+					</div>
+				</div>
+				<div class="mobile-menu__scroll">
+					<div class="mobile-menu__wrapper">
+						<div class="mobile-menu__block">
+							<a href="#" class="mobile-menu__btn mobile-menu__btn--orange btn">Товары на акции</a>
+							<a href="#" class="mobile-menu__btn mobile-menu__btn--green mobile-menu__btn--catalog btn">Каталог товаров</a>
 						</div>
+						<div class="mobile-menu__block">
+							<ul class="mobile-menu__list">
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__link">Новости</a>
+								</li>
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__link mobile-menu__link--green">Доставка</a>
+								</li>
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__link">О нас</a>
+								</li>
+								<li class="mobile-menu__list-item">
+									<div class="mobile-menu__list-elem">
+										<a href="#" class="mobile-menu__link mobile-menu__link--trigger">
+											<span>Партнерская сеть</span>
+											<svg>
+												<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+											</svg>
+										</a>
+										<div class="mobile-menu__dropdown">
+											<ul class="mobile-menu__sublist">
+												<li class="mobile-menu__list-item">
+													<a href="#" class="mobile-menu__link">Аптеки ADEL</a>
+												</li>
+												<li class="mobile-menu__list-item">
+													<a href="#" class="mobile-menu__link">Аптеки "Добрыя лекi"</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__link">Задать вопрос</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="mobile-menu__bottom">
+						<div class="c-new-number mobile-menu__number">
+							<a href="tel:6838787" class="c-new-number__link">
+								<svg>
+									<use xlink:href="img/sprite.svg#icon-phone"></use>
+								</svg>
+								<b>683-87-87</b>
+								<span>(MTC, A1, Life)</span>
+							</a>
+							<p class="c-new-number__help">Аптека №25 пятой категории ООО "Аптека групп Центр</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu__holder mobile-menu__holder--catalog">
+			<div class="mobile-menu__wrap">
+				<div class="mobile-menu__top">
+					<button class="mobile-menu__back" aria-label="Закрыть">
+						<svg>
+							<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+						</svg>
+					</button>
+					<div class="mobile-menu__center">
+						<h3 class="mobile-menu__heading">Каталог товаров</h3>
 					</div>
 				</div>
 				<div class="mobile-menu__scroll">
@@ -2299,49 +3240,6 @@
 									</a>
 								</li>
 							</ul>
-						</div>
-						<div class="mobile-menu__block">
-							<a href="#" class="mobile-menu__btn square-btn square-btn--red">
-								<svg>
-									<use xlink:href="img/sprite.svg#icon-discount"></use>
-								</svg>
-								<span>Товары на акции</span>
-							</a>
-							<a href="#" class="mobile-menu__btn square-btn">
-								<svg>
-									<use xlink:href="img/sprite.svg#icon-delivery"></use>
-								</svg>
-								<span>Самовывоз из аптеки</span>
-							</a>
-						</div>
-						<div class="mobile-menu__block">
-							<ul class="mobile-menu__list">
-								<li class="mobile-menu__list-item">
-									<a href="#" class="mobile-menu__link">Найти аптеку</a>
-								</li>
-								<li class="mobile-menu__list-item">
-									<a href="#" class="mobile-menu__link mobile-menu__link--green">Страхование</a>
-								</li>
-								<li class="mobile-menu__list-item">
-									<a href="#" class="mobile-menu__link">Партнерские программы</a>
-								</li>
-								<li class="mobile-menu__list-item">
-									<a href="#" class="mobile-menu__link">Акции и новости</a>
-								</li>
-								<li class="mobile-menu__list-item">
-									<a href="#" class="mobile-menu__link">О нас</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="mobile-menu__bottom">
-						<div class="c-number mobile-menu__number">
-							<div class="c-number__item">
-								<span class="c-number__icon --life"></span>
-								<span class="c-number__icon --mts"></span>
-								<span class="c-number__icon --velcom"></span>
-								<a href="tel:6838787" class="c-number__link">683-87-87</a>
-							</div>
 						</div>
 					</div>
 				</div>

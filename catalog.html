@@ -47,21 +47,36 @@
 							</div>
 						</div>
 					</div>
+					<div class="c-select header__select">
+						<a href="tel:6838787" class="c-select__selected">
+							<svg>
+								<use xlink:href="img/sprite.svg#icon-phone"></use>
+							</svg>
+							<span><b>683-87-87</b> (МТС, A1, Life)</span>
+						</a>
+						<div class="c-select__dropdown">
+							<ul class="c-select__list">
+								<li class="c-select__item">
+									<a href="tel:7008787" class="c-select__link">
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-phone"></use>
+										</svg>
+										<span><b>700-87-87</b></span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<p class="header__pharmacy">Аптека №25 пятой категории ООО "Фарммаркет-плюс"</p>
 					<ul class="header__list">
-						<li class="header__list-item">
-							<a href="#" class="header__link">Страхование</a>
-						</li>
 						<li class="header__list-item">
 							<a href="#" class="header__link">Новости и акции</a>
 						</li>
 						<li class="header__list-item">
-							<a href="#" class="header__link">О нас</a>
-						</li>
-						<li class="header__list-item">
-							<a href="#" class="header__link">Программа лояльности</a>
-						</li>
-						<li class="header__list-item">
 							<a href="#" class="header__link">Партнерские программы</a>
+						</li>
+						<li class="header__list-item">
+							<a href="#" class="header__link">О нас</a>
 						</li>
 						<li class="header__list-item">
 							<a href="#" class="header__link">Найти аптеку</a>
@@ -78,9 +93,8 @@
 							<span class="hamburger__inner"></span>
 							<span class="hamburger__inner"></span>
 						</button>
-						<a href="#" class="header__logotype">
-							<img src="img/logotype.svg" width="255" height="27" alt="АПТЕКА ADEL">
-							<!-- <span>Аптека №25 пятой категории ООО “Фарммаркет-плюс”</span> -->
+						<a href="index.html" class="header__logotype header__logotype--vseleki">
+							<img src="img/logotype.svg" width="238" height="40" alt="vse-leki.by">
 						</a>
 						<div class="c-catalog header__catalog">
 							<button class="c-catalog__trigger">
@@ -1901,7 +1915,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="header-search header__search">
+						<div class="header-search header__search header__search--long">
 							<form action="#" class="header-search__form">
 								<input type="text" class="header-search__input" placeholder="Начать поиск" value="">
 								<div class="header-search__controls">
@@ -2006,14 +2020,6 @@
 								</div>
 							</div>
 						</div>
-						<div class="c-number header__number">
-							<div class="c-number__item">
-								<span class="c-number__icon --life"></span>
-								<span class="c-number__icon --mts"></span>
-								<span class="c-number__icon --velcom"></span>
-								<a href="tel:6838787" class="c-number__link">683-87-87</a>
-							</div>
-						</div>
 						<a href="#" class="c-basket header__basket">
 							<div class="c-basket__group">
 								<svg class="c-basket__icon">
@@ -2051,9 +2057,11 @@
 							<li class="header-nav__item">
 								<a href="#" class="header-nav__link header-nav__link--accent">акции</a>
 							</li>
+							<li class="header-nav__item">
+								<a href="#" class="header-nav__link header-nav__link--accent">САМОВЫВОЗ</a>
+							</li>
 						</ul>
 					</nav>
-					<a href="#" class="header__btn btn btn--border">ДОСТАВКА И САМОВЫВОЗ</a>
 				</div>
 			</div>
 		</header>
@@ -2660,125 +2668,113 @@
 		</div>
 		<!-- end of content -->
 		<!-- footer -->
-		<footer class="footer" id="footer">
-			<div class="container">
-				<div class="footer__wrapper">
-					<div class="footer__block">
-						<a href="index.html" class="footer__logotype">
-							<img src="img/logotype-dark.svg" width="255" height="26" alt="АПТЕКА ADEL">
-						</a>
-						<!-- <p class="footer__copyright">
-                    ООО «Управляющая компания холдинга
-                    «Аптека&nbsp;групп», 2017. Все права защищены.<br>
-                    УНП 191751593<br>
-                    220020, г. Минск, пр-т Победителей, 84, офис 16.
-                </p> -->
-						<p class="footer__copyright">
-							Общество с ограниченной ответственностью "Фарммаркет-плюс"<br>
-							Свидетельство выдано Витебским областным исполнительным комитетом решением от 04 августа 2005 года №535 <br>
-							Юридический адрес:<br>
-							220073, г. Минск, ул. Кальварийская, д.44, пом. 3Н<br>
-							телефон: 80172490005<br>
-							email: fmpfmp5@gmail.com
-							<br><br>
-							Аптека №25 пятой категории по адресу: г. Минск, ул. Янки Брыля, 30-1н.<br>
-							телефон: появится позже<br>
-							email: fmp25@aptphg.by <br>
-							Режим работы Интернет-аптеки: пн-пт 8.00-21.00, сб-вс 10.00-19.00
-						</p>
-					</div>
-					<div class="footer__block">
-						<div class="c-number footer__elem">
-							<div class="c-number__item">
-								<span class="c-number__icon --life"></span>
-								<span class="c-number__icon --mts"></span>
-								<span class="c-number__icon --velcom"></span>
-								<a href="tel:6838787" class="c-number__link c-number__link--sm">683-87-87</a>
+		<footer class="footer-w" id="footer">
+			<div class="footer-w__main">
+				<div class="container">
+					<div class="footer-w__wrapper">
+						<div class="footer-w__block">
+							<h3 class="footer-w__subtitle">Покупателям</h3>
+							<div class="footer-w__columns">
+								<div class="footer-w__column">
+									<ul class="footer-w__list">
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">Страхование</a>
+										</li>
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">Новости и акции</a>
+										</li>
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">О нас</a>
+										</li>
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">Программа лояльности</a>
+										</li>
+									</ul>
+								</div>
+								<div class="footer-w__column">
+									<ul class="footer-w__list">
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">Партнерские программы</a>
+										</li>
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">Найти аптеку</a>
+										</li>
+										<li class="footer-w__list-item">
+											<a href="#" class="footer-w__link">Доставка и самовывоз</a>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</div>
-						<div class="c-contacts footer__elem">
-							<ul class="c-contacts__list">
-								<li class="c-contacts__item">
-									<a href="mailto:info@apteka-adel.by" class="c-contacts__link">
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-email"></use>
-										</svg>
-										<span>info@apteka-adel.by</span>
-									</a>
+						<div class="footer-w__block">
+							<h3 class="footer-w__subtitle">Контакты</h3>
+							<div class="footer-w__contacts">
+								<div class="footer-w__contacts-inner">
+									<span class="footer-w__contacts-elem">Телефон</span>
+									<span class="footer-w__contacts-delimiter"></span>
+									<a href="tel:6838787" class="footer-w__contacts-value"><b>683-87-87</b> (MTC, A1, life)</a>
+								</div>
+								<div class="footer-w__contacts-inner">
+									<span class="footer-w__contacts-elem">Телефон</span>
+									<span class="footer-w__contacts-delimiter"></span>
+									<a href="tel:375445033038" class="footer-w__contacts-value"><b>+375 (44) 503-30-38</b> (A1)</a>
+								</div>
+								<div class="footer-w__contacts-inner">
+									<span class="footer-w__contacts-elem">Эл. почта</span>
+									<span class="footer-w__contacts-delimiter"></span>
+									<a href="mailto:info@apteka-adel.by" class="footer-w__contacts-value">info@apteka-adel.by</a>
+								</div>
+								<div class="footer-w__contacts-inner">
+									<span class="footer-w__contacts-elem">ВКонтакте</span>
+									<span class="footer-w__contacts-delimiter"></span>
+									<a href="#" class="footer-w__contacts-value">@apteka-adel</a>
+								</div>
+								<div class="footer-w__contacts-inner">
+									<span class="footer-w__contacts-elem">Instagram</span>
+									<span class="footer-w__contacts-delimiter"></span>
+									<a href="#" class="footer-w__contacts-value">@apteka-adel</a>
+								</div>
+							</div>
+						</div>
+						<div class="footer-w__block">
+							<h3 class="footer-w__subtitle">Партнерская сеть</h3>
+							<ul class="footer-w__list">
+								<li class="footer-w__list-item">
+									<a href="#" class="footer-w__link">Аптеки ADEL</a>
+								</li>
+								<li class="footer-w__list-item">
+									<a href="#" class="footer-w__link">Аптеки “Добрый лекi”</a>
+								</li>
+								<li class="footer-w__list-item">
+									<a href="#" class="footer-w__link">Аптеки “Добрый лекi эканом”</a>
 								</li>
 							</ul>
 						</div>
-						<div class="c-socmedia footer__elem">
-							<ul class="c-socmedia__list">
-								<li class="c-socmedia__item">
-									<a href="#" class="c-socmedia__link">
-										<svg class="c-socmedia__icon">
-											<use xlink:href="img/sprite.svg#icon-instagram"></use>
-										</svg>
-									</a>
-								</li>
-								<li class="c-socmedia__item">
-									<a href="#" class="c-socmedia__link">
-										<svg class="c-socmedia__icon">
-											<use xlink:href="img/sprite.svg#icon-vk"></use>
-										</svg>
-									</a>
-								</li>
-							</ul>
-						</div>
 					</div>
-					<div class="footer__block">
-						<div class="join-block footer__join">
-							<h3 class="join-block__title">Присоединяйтесь – <a href="#">@apteka_adel</a></h3>
-							<div class="join-block__wrapper">
-								<a href="#" class="join-block__item">
-									<img src="img/join-01.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-02.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-01.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-03.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-02.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-04.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-02.png" alt="Image">
-								</a>
-								<a href="#" class="join-block__item">
-									<img src="img/join-05.png" alt="Image">
-								</a>
-							</div>
+					<p class="footer-w__description">
+						ООО "Фарммаркет-плюс". Свидетельство выдано Витебским областным исполнительным комитетом решением от 04 августа 2005 года №535. Юридический адрес: 220073, г. Минск, ул. Кальварийская, д.44, пом. 3Н. Tелефон: +375 (17) 249-00-05. Email: fmpfmp5@gmail.com.
+						<br>
+						Аптека №25 пятой категории . Адрес: г. Минск, ул. Янки Брыля, 30-1н. Телефон: +375 (17) 249-00-05. Еmail: fmp25@aptphg.by. Режим работы Интернет-аптеки: пн-пт 8.00-21.00, сб-вс 10.00-19.00
+					</p>
+					<div class="footer-w__inner">
+						<div class="footer-w__elems">
+							<a href="#" class="footer-w__elem">Обработка персональных данных</a>
+							<a href="#" class="footer-w__elem">Политика cookies</a>
+							<a href="#" class="footer-w__elem">Договор оферты</a>
+							<a href="#" class="footer-w__elem">Фармацевтический надзор</a>
 						</div>
+						<picture class="footer-w__payments">
+							<img src="img/paylogos.png" alt="Image">
+						</picture>
 					</div>
 				</div>
-				<div class="footer__wrapper footer__wrapper--bottom">
-					<ul class="footer__list">
-						<li class="footer__list-item">
-							<a href="#" class="footer__link">Обработка персональных данных</a>
-						</li>
-						<li class="footer__list-item">
-							<a href="#" class="footer__link">Политика cookies</a>
-						</li>
-						<li class="footer__list-item">
-							<a href="#" class="footer__link">Договор оферты</a>
-						</li>
-						<li class="footer__list-item">
-							<a href="https://gospharmnadzor.by/" class="footer__link" target="_blank">Фармацевтический надзор</a>
-						</li>
-					</ul>
-					<ul class="footer__list">
-						<li class="footer__item">
-							<p class="footer__text"><a href="#" target="_blank">Сопровождение проекта – Silentcode</a></p>
-						</li>
-					</ul>
+			</div>
+			<div class="footer-w__bottom">
+				<div class="container">
+					<div class="footer-w__wrapper footer-w__wrapper--center">
+						<p class="footer-w__copyright">ООО «Управляющая компания холдинга «Аптека групп»</p>
+						<p class="footer-w__copyright">Разработка и продвижение – <a href="#" target="_blank">Silentcode</a></p>
+					</div>
 				</div>
 			</div>
 		</footer>
@@ -2795,6 +2791,9 @@
 							<use xlink:href="img/sprite.svg#icon-close"></use>
 						</svg>
 					</button>
+					<a href="index.html" class="mobile-menu__logotype">
+						<img src="img/logotype.svg" width="129" height="30" alt="аптечка+">
+					</a>
 					<div class="mobile-menu__inner">
 						<div class="c-location mobile-menu__location">
 							<a href="#" class="c-location__trigger city-selection-btn">
@@ -2804,14 +2803,84 @@
 								<span>Витебск</span>
 							</a>
 						</div>
-						<div class="c-user mobile-menu__user">
-							<a href="#" class="c-user__trigger">
-								<picture class="c-user__img">
-									<img src="img/user.svg" alt="Image">
-								</picture>
-								<span class="c-user__name">Мой кабинет</span>
-							</a>
+						<!-- <div class="c-user mobile-menu__user">
+                        <a href="#" class="c-user__trigger">
+                            <picture class="c-user__img">
+                                <img src="img/user.svg" alt="Image">
+                            </picture>
+                            <span class="c-user__name">Мой кабинет</span>
+                        </a>
+                    </div> -->
+					</div>
+				</div>
+				<div class="mobile-menu__scroll">
+					<div class="mobile-menu__wrapper">
+						<div class="mobile-menu__block">
+							<a href="#" class="mobile-menu__btn mobile-menu__btn--orange btn">Товары на акции</a>
+							<a href="#" class="mobile-menu__btn mobile-menu__btn--green mobile-menu__btn--catalog btn">Каталог товаров</a>
 						</div>
+						<div class="mobile-menu__block">
+							<ul class="mobile-menu__list">
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__link">Новости</a>
+								</li>
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__link mobile-menu__link--green">Доставка</a>
+								</li>
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__link">О нас</a>
+								</li>
+								<li class="mobile-menu__list-item">
+									<div class="mobile-menu__list-elem">
+										<a href="#" class="mobile-menu__link mobile-menu__link--trigger">
+											<span>Партнерская сеть</span>
+											<svg>
+												<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+											</svg>
+										</a>
+										<div class="mobile-menu__dropdown">
+											<ul class="mobile-menu__sublist">
+												<li class="mobile-menu__list-item">
+													<a href="#" class="mobile-menu__link">Аптеки ADEL</a>
+												</li>
+												<li class="mobile-menu__list-item">
+													<a href="#" class="mobile-menu__link">Аптеки "Добрыя лекi"</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="mobile-menu__list-item">
+									<a href="#" class="mobile-menu__link">Задать вопрос</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="mobile-menu__bottom">
+						<div class="c-new-number mobile-menu__number">
+							<a href="tel:6838787" class="c-new-number__link">
+								<svg>
+									<use xlink:href="img/sprite.svg#icon-phone"></use>
+								</svg>
+								<b>683-87-87</b>
+								<span>(MTC, A1, Life)</span>
+							</a>
+							<p class="c-new-number__help">Аптека №25 пятой категории ООО "Аптека групп Центр</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mobile-menu__holder mobile-menu__holder--catalog">
+			<div class="mobile-menu__wrap">
+				<div class="mobile-menu__top">
+					<button class="mobile-menu__back" aria-label="Закрыть">
+						<svg>
+							<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+						</svg>
+					</button>
+					<div class="mobile-menu__center">
+						<h3 class="mobile-menu__heading">Каталог товаров</h3>
 					</div>
 				</div>
 				<div class="mobile-menu__scroll">
@@ -2897,49 +2966,6 @@
 									</a>
 								</li>
 							</ul>
-						</div>
-						<div class="mobile-menu__block">
-							<a href="#" class="mobile-menu__btn square-btn square-btn--red">
-								<svg>
-									<use xlink:href="img/sprite.svg#icon-discount"></use>
-								</svg>
-								<span>Товары на акции</span>
-							</a>
-							<a href="#" class="mobile-menu__btn square-btn">
-								<svg>
-									<use xlink:href="img/sprite.svg#icon-delivery"></use>
-								</svg>
-								<span>Самовывоз из аптеки</span>
-							</a>
-						</div>
-						<div class="mobile-menu__block">
-							<ul class="mobile-menu__list">
-								<li class="mobile-menu__list-item">
-									<a href="#" class="mobile-menu__link">Найти аптеку</a>
-								</li>
-								<li class="mobile-menu__list-item">
-									<a href="#" class="mobile-menu__link mobile-menu__link--green">Страхование</a>
-								</li>
-								<li class="mobile-menu__list-item">
-									<a href="#" class="mobile-menu__link">Партнерские программы</a>
-								</li>
-								<li class="mobile-menu__list-item">
-									<a href="#" class="mobile-menu__link">Акции и новости</a>
-								</li>
-								<li class="mobile-menu__list-item">
-									<a href="#" class="mobile-menu__link">О нас</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="mobile-menu__bottom">
-						<div class="c-number mobile-menu__number">
-							<div class="c-number__item">
-								<span class="c-number__icon --life"></span>
-								<span class="c-number__icon --mts"></span>
-								<span class="c-number__icon --velcom"></span>
-								<a href="tel:6838787" class="c-number__link">683-87-87</a>
-							</div>
 						</div>
 					</div>
 				</div>
