@@ -2405,14 +2405,120 @@
 						<img src="img/logotype.svg" width="129" height="30" alt="аптечка+">
 					</a>
 					<div class="mobile-menu__inner">
-						<div class="c-location mobile-menu__location">
-							<a href="#" class="c-location__trigger city-selection-btn">
-								<svg>
-									<use xlink:href="img/sprite.svg#icon-location"></use>
-								</svg>
-								<span>Витебск</span>
-							</a>
+						<div class="header-search mobile-menu__search-">
+							<form action="#" class="header-search__form">
+								<input type="text" class="header-search__input" placeholder="Начать поиск" value="@@search">
+								<div class="header-search__controls">
+									<button class="header-search__btn-search">Найти</button>
+									<button class="header-search__clear" aria-label="Очистить">
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-close"></use>
+										</svg>
+									</button>
+								</div>
+								<button class="header-search__btn" aria-label="Поиск">
+									<svg>
+										<use xlink:href="img/sprite.svg#icon-search"></use>
+									</svg>
+								</button>
+								<button class="header-search__close">Отмена</button>
+							</form>
+							<div class="header-search__dropdown">
+								<span class="header-search__preview">Начните поиск - введите запрос</span>
+								<div class="header-search__holder">
+									<div class="header-search__results">
+										<div class="header-search__block">
+											<ul class="header-search__list">
+												<li class="header-search__list-item">
+													<a href="#" class="header-search__link">Гигиена носа</a>
+												</li>
+												<li class="header-search__list-item">
+													<a href="#" class="header-search__link">Косметика и гигиена</a>
+												</li>
+											</ul>
+										</div>
+										<div class="header-search__block">
+											<div class="header-search__list">
+												<a href="#" class="header-search__item">
+													<picture class="header-search__img">
+														<img src="img/catalog-01.png" alt="Image">
+													</picture>
+													<div class="header-search__group">
+														<span class="header-search__name">Аква <span>мари</span>с (эктоин спрей назальный 20 мл ) Jadran Galenski Laboratorij D. D.-Хорватия</span>
+														<span class="header-search__production">Производство: Хорватия</span>
+														<div class="header-search__prices">
+															<span class="header-search__price header-search__price--old">43.88 руб.</span>
+															<span class="header-search__price header-search__price--new">39.12 руб.</span>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="header-search__item">
+													<picture class="header-search__img">
+														<img src="img/catalog-01.png" alt="Image">
+													</picture>
+													<div class="header-search__group">
+														<span class="header-search__name"><span>Мари</span>с (эктоин спрей назальный 20мл)</span>
+														<span class="header-search__production">Производство: Хорватия</span>
+														<div class="header-search__prices">
+															<span class="header-search__price">39.12 руб.</span>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="header-search__item">
+													<picture class="header-search__img">
+														<img src="img/catalog-01.png" alt="Image">
+													</picture>
+													<div class="header-search__group">
+														<span class="header-search__name"><span>Мари</span>с (эктоин спрей назальный 20мл)</span>
+														<span class="header-search__production">Производство: Хорватия</span>
+														<div class="header-search__prices">
+															<span class="header-search__price">39.12 руб.</span>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="header-search__item">
+													<picture class="header-search__img">
+														<img src="img/catalog-01.png" alt="Image">
+													</picture>
+													<div class="header-search__group">
+														<span class="header-search__name">Аква <span>мари</span>с (эктоин спрей назальный 20 мл ) Jadran Galenski Laboratorij D. D.-Хорватия</span>
+														<span class="header-search__production">Производство: Хорватия</span>
+														<div class="header-search__prices">
+															<span class="header-search__price header-search__price--old">543.88 руб.</span>
+															<span class="header-search__price header-search__price--new">939.12 руб.</span>
+														</div>
+													</div>
+												</a>
+												<a href="#" class="header-search__item">
+													<picture class="header-search__img">
+														<img src="img/catalog-01.png" alt="Image">
+													</picture>
+													<div class="header-search__group">
+														<span class="header-search__name"><span>Мари</span>с (эктоин спрей назальный 20мл)</span>
+														<span class="header-search__production">Производство: Хорватия</span>
+														<div class="header-search__prices">
+															<span class="header-search__price header-search__price--new">39.12 руб.</span>
+														</div>
+													</div>
+												</a>
+											</div>
+										</div>
+										<div class="header-search__bottom">
+											<a href="#" class="header-search__more btn">Показать все результаты</a>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
+						<a href="#" class="c-basket mobile-menu__basket">
+							<div class="c-basket__group">
+								<svg class="c-basket__icon">
+									<use xlink:href="img/sprite.svg#icon-basket"></use>
+								</svg>
+								<span class="c-basket__title">Корзина</span>
+							</div>
+							<span class="c-basket__value">12</span>
+						</a>
 						<!-- <div class="c-user mobile-menu__user">
                         <a href="#" class="c-user__trigger">
                             <picture class="c-user__img">
@@ -2464,6 +2570,19 @@
 									<a href="#" class="mobile-menu__link">Задать вопрос</a>
 								</li>
 							</ul>
+						</div>
+						<div class="mobile-menu__block">
+							<div class="c-mobile-location mobile-menu__location">
+								<div class="c-mobile-location__wrapper">
+									<div class="c-mobile-location__city">
+										<svg>
+											<use xlink:href="img/sprite.svg#icon-location"></use>
+										</svg>
+										<span>Минск</span>
+									</div>
+									<a href="#" class="c-mobile-location__link city-selection-btn">Изменить город</a>
+								</div>
+							</div>
 						</div>
 					</div>
 					<div class="mobile-menu__bottom">
