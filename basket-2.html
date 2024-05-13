@@ -2166,9 +2166,9 @@
 										<div class="c-choosing-pharmacy basket__choosing-pharmacy">
 											<div class="c-choosing-pharmacy__wrapper c-choosing-pharmacy__wrapper--grey">
 												<p class="c-choosing-pharmacy__elem">
-													<span>Самовывоз: </span> Аптека №31 ADEL, г. Минск, ул. Кирилла Туровского, 113
+													<span><span>Самовывоз: </span> Аптека №31 ADEL, г. Минск, ул. Кирилла Туровского, 113 </span>
+													<a href="#" class="pharmacy-list-edit-address">Изменить</a>
 												</p>
-												<a href="#" class="c-choosing-pharmacy__link pharmacy-list-trigger">Изменить</a>
 											</div>
 										</div>
 									</div>
@@ -2242,7 +2242,11 @@
 											</span>
 										</div>
 										<div class="c-choosing-pharmacy basket__choosing-pharmacy">
-											<a href="#" class="c-choosing-pharmacy__btn pharmacy-list-trigger">Выбрать аптеку самовывоза</a>
+											<div class="c-choosing-pharmacy__wrapper">
+												<p class="c-choosing-pharmacy__elem">
+													<a href="#" class="pharmacy-list-edit-address">Выбрать аптеку самовывоза</a>
+												</p>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -2262,7 +2266,7 @@
 											<div class="basket__block">
 												<div class="basket__inner">
 													<span class="basket__elem">Годен: 12 мес</span>
-													<span class="basket__elem">В аптеке: 0 шт</span>
+													<span class="basket__elem hidden">В аптеке: 0 шт</span>
 												</div>
 											</div>
 											<div class="basket__block basket__block--flex">
@@ -2281,9 +2285,11 @@
 										<div class="c-choosing-pharmacy basket__choosing-pharmacy">
 											<div class="c-choosing-pharmacy__wrapper c-choosing-pharmacy__wrapper--red">
 												<p class="c-choosing-pharmacy__elem">
-													<b>Нет в наличии: </b> Аптека №31 ADEL, г. Минск, ул. Кирилла Туровского, 113
+													<span>
+														<b>Нет в наличии: </b> Аптека №31 ADEL, г. Минск, ул. Кирилла Туровского, 113
+													</span>
+													<a href="#" class="pharmacy-list-edit-address">Изменить</a>
 												</p>
-												<a href="#" class="c-choosing-pharmacy__link">Изменить</a>
 											</div>
 										</div>
 									</div>
@@ -2309,6 +2315,7 @@
 											</svg>
 											<span>ВЫБРАТЬ АПТЕКУ</span>
 										</a>
+										<span class="totalinfo__error">Не выбраны все аптеки</span>
 									</div>
 									<div class="totalinfo__block">
 										<div class="totalinfo__inner">
@@ -5837,8 +5844,9 @@
 				<div class="pharmacy-list-filter__wrapper">
 					<div class="pharmacy-list-filter__elem">
 						<div class="desktop-select">
-							<div class="desktop-select__selected">Партизанский</div>
+							<div class="desktop-select__selected">Все районы</div>
 							<div class="desktop-select__dropdown">
+								<button data-area="all" class="desktop-select__btn is--active">Все районы</button>
 								<button data-area="partisan" class="desktop-select__btn">Партизанский</button>
 								<button data-area="pervomaisk" class="desktop-select__btn">Первомайский</button>
 								<button data-area="frunzensky" class="desktop-select__btn">Фрунзенский</button>
@@ -5987,7 +5995,7 @@
 								</div>
 								<div class="pharmacy-list-card__block">
 									<div class="pharmacy-list-card__inner">
-										<div class="pharmacy-list-card__group">
+										<div class="pharmacy-list-card__group availability">
 											<span class="pharmacy-list-card__status pharmacy-list-card__status--green">
 												<span>Все в наличии</span>
 											</span>
@@ -6050,7 +6058,7 @@
 								</div>
 								<div class="pharmacy-list-card__block">
 									<div class="pharmacy-list-card__inner">
-										<div class="pharmacy-list-card__group">
+										<div class="pharmacy-list-card__group availability">
 											<span class="pharmacy-list-card__status pharmacy-list-card__status--yellow">
 												<span><span class="desktop">В наличии</span> 3 из 4</span>
 											</span>
@@ -6113,7 +6121,7 @@
 								</div>
 								<div class="pharmacy-list-card__block">
 									<div class="pharmacy-list-card__inner">
-										<div class="pharmacy-list-card__group">
+										<div class="pharmacy-list-card__group availability">
 											<span class="pharmacy-list-card__status">
 												<span>Под заказ</span>
 											</span>
@@ -6176,7 +6184,7 @@
 								</div>
 								<div class="pharmacy-list-card__block">
 									<div class="pharmacy-list-card__inner">
-										<div class="pharmacy-list-card__group">
+										<div class="pharmacy-list-card__group availability">
 											<span class="pharmacy-list-card__status pharmacy-list-card__status--red">
 												<span>Нет в наличии</span>
 											</span>
@@ -6200,6 +6208,7 @@
 	</div>
 	<!-- end of pharmacy list -->
 	<!-- scripts -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<script src="js/vendor.min.js"></script>
 	<script src="js/app.min.js"></script>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

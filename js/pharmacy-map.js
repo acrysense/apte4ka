@@ -7,6 +7,8 @@
 		this.center = center;
 
 		this.main = document.getElementById('pharmacy-list');
+		this.trigger = document.querySelectorAll('.pharmacy-list-trigger')
+		this.editAddress = document.querySelectorAll('.pharmacy-list-edit-address')
 		this.mapContainer = this.main.querySelector('#pharmacy-map');
 		this.filterPharmacy = this.main.querySelectorAll('[data-pharmacy], .pharmacy-list-sort__select--brand select');
 		this.filterStock = this.main.querySelectorAll('[data-stock], .pharmacy-list-sort__select--stock select');
@@ -14,7 +16,7 @@
 		this.showMap = this.main.querySelector('.pharmacy-list__switch');
 		this.search = this.main.querySelector('.pharmacy-list-filter__input');
 		this.list = this.main.querySelector('.pharmacy-list__wrapper');
-		// this.clear = this.main.querySelector('.js-clear');
+		this.clear = this.main.querySelector('.pharmacy-list__close');
 		this.icons = ['adel', 'dleki'];
 		this.iconImageSize = [30,30];
 		this.iconImageOffset = [-15,-30];
@@ -71,14 +73,19 @@
 		for (const item of i.workTime) {
 			this.works.push(`<li class="c-schedule__item"><span class="c-schedule__elem">${item}</span></li>`);
 		}
+		
+		var items_count_str = '';
+		for (var key in item.products) {
+			items_count_str += key + ':' + item.products[key]+';';
+		}
 
 		this.tooltip = '';
-		if(i.tooltipText) {
+		if (i.tooltipText) {
 			this.tooltip = 
 			`<div class="c-sm-info">
 				<button class="c-sm-info__trigger">
 					<svg class="c-sm-info__trigger-icon">
-						<use xlink:href="img/sprite.svg#icon-info-circle"></use>
+						<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-info-circle"></use>
 					</svg>
 				</button>
 				<div class="c-sm-info__dropdown c-sm-info__dropdown--lg">
@@ -88,53 +95,237 @@
 			</div>`
 		}
 
-        this.itemHtml = `<div class="pharmacy-list-card pharmacy-list__item">
-            <div class="pharmacy-list-card__block">
-                <span class="pharmacy-list-card__name">
-                    <svg>
-                        <use xlink:href="img/sprite.svg#icon-${icon}"></use>
-                    </svg>
-                    <span>${i.hintContent}</span>
-                </span>
-                <span class="pharmacy-list-card__help">${i.location}</span>
-                <a href="#" class="pharmacy-list-card__link pharmacy-list-card__link--mobile">Телефоны и график работы</a>
-            </div>
-            <div class="pharmacy-list-card__block">
-                <div class="pharmacy-list-card__inner">
-                    <div class="pharmacy-list-card__schedule c-schedule">
-                        <span class="c-schedule__trigger">
-                            <span>${i.workTime[0]}</span>
-                            <span class="c-schedule__trigger-icon">
-                                <svg>
-                                    <use xlink:href="img/sprite.svg#icon-caret-sm"></use>
-                                </svg>
-                            </span>
-                        </span>
-                        <div class="c-schedule__dropdown">
-                            <ul class="c-schedule__list">
-                                ${this.works.join('')}
-                            </ul>
-                        </div>
-                    </div>
-                    <a href="tel:${i.phones[0]}" class="pharmacy-list-card__phone">${i.phones[0]}</a>
-                </div>
-            </div>
-            <div class="pharmacy-list-card__block">
-                <div class="pharmacy-list-card__inner">
-                    <div class="pharmacy-list-card__group">
-                        <span class="pharmacy-list-card__status pharmacy-list-card__status--${i.stockColor}">
-                            <span>${i.stockText}</span>
-							${this.tooltip}
-                        </span>
-                        <div class="pharmacy-list-card__elems">
-                            <span class="pharmacy-list-card__elem">Аптека: ${i.onPharmacyValue} шт</span>
-                            <span class="pharmacy-list-card__elem">Склад: ${i.onStockValue} шт</span>
-                        </div>
-                    </div>
-                    <a href="#" class="pharmacy-list-card__btn btn btn--light" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix}>Выбрать</a>
-                </div>
-            </div>
-        </div>`;
+		if ($('.pharmacy-list').hasClass('custom_address')) {
+			console.log('custom')
+
+			var current_product = document.querySelector('.pharmacy-list').dataset.addressFor
+			var missing_items = i.missing;
+
+			if (jQuery.inArray(String(current_product), missing_items) == -1) {
+				this.itemHtml = `<div class="pharmacy-list-card pharmacy-list__item pharmacy-item">
+					<div class="pharmacy-list-card__block">
+						<span class="pharmacy-list-card__name pharmacy-name">
+							<svg>
+								<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-${icon}"></use>
+							</svg>
+							<span>${i.hintContent}</span>
+						</span>
+						<span class="pharmacy-list-card__help pharmacy-address">${i.location}</span>
+						<a href="#" class="pharmacy-list-card__link pharmacy-list-card__link--mobile">Телефоны и график работы</a>
+					</div>
+					<div class="pharmacy-list-card__block">
+						<div class="pharmacy-list-card__inner">
+							<div class="pharmacy-list-card__schedule c-schedule">
+								<span class="c-schedule__trigger">
+									<span>${i.workTime[0]}</span>
+									<span class="c-schedule__trigger-icon">
+										<svg>
+											<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-caret-sm"></use>
+										</svg>
+									</span>
+								</span>
+								<div class="c-schedule__dropdown">
+									<ul class="c-schedule__list">
+										${this.works.join('')}
+									</ul>
+								</div>
+							</div>
+							<a href="tel:${i.phones[0]}" class="pharmacy-list-card__phone">${i.phones[0]}</a>
+						</div>
+					</div>
+					<div class="pharmacy-list-card__block">
+						<div class="pharmacy-list-card__inner">
+							<div class="pharmacy-list-card__group availability">
+								<span class="pharmacy-list-card__status pharmacy-list-card__status--green">
+									<span>В наличии</span>
+								</span>
+							</div>
+							<a href="#" class="pharmacy-list-card__btn btn btn--light" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix}>Выбрать</a>
+						</div>
+					</div>
+				</div>`;
+			} else {
+				this.itemHtml = `<div class="pharmacy-list-card pharmacy-list__item pharmacy-item">
+					<div class="pharmacy-list-card__block">
+						<span class="pharmacy-list-card__name pharmacy-name">
+							<svg>
+								<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-${icon}"></use>
+							</svg>
+							<span>${i.hintContent}</span>
+						</span>
+						<span class="pharmacy-list-card__help pharmacy-address">${i.location}</span>
+						<a href="#" class="pharmacy-list-card__link pharmacy-list-card__link--mobile">Телефоны и график работы</a>
+					</div>
+					<div class="pharmacy-list-card__block">
+						<div class="pharmacy-list-card__inner">
+							<div class="pharmacy-list-card__schedule c-schedule">
+								<span class="c-schedule__trigger">
+									<span>${i.workTime[0]}</span>
+									<span class="c-schedule__trigger-icon">
+										<svg>
+											<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-caret-sm"></use>
+										</svg>
+									</span>
+								</span>
+								<div class="c-schedule__dropdown">
+									<ul class="c-schedule__list">
+										${this.works.join('')}
+									</ul>
+								</div>
+							</div>
+							<a href="tel:${i.phones[0]}" class="pharmacy-list-card__phone">${i.phones[0]}</a>
+						</div>
+					</div>
+					<div class="pharmacy-list-card__block">
+						<div class="pharmacy-list-card__inner">
+							<div class="pharmacy-list-card__group availability">
+								<span class="pharmacy-list-card__status pharmacy-list-card__status--red">
+									<span>Нет в наличии</span>
+								</span>
+							</div>
+							<a href="#" class="pharmacy-list-card__btn btn btn--light" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix} disabled>Выбрать</a>
+						</div>
+					</div>
+				</div>`;
+			}
+			// if (!(i.stockColor == 'yellow')) {
+			// 	this.itemHtml = `<div class="pharmacy-list-card pharmacy-list__item">
+			// 		<div class="pharmacy-list-card__block">
+			// 			<span class="pharmacy-list-card__name">
+			// 				<svg>
+			// 					<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-${icon}"></use>
+			// 				</svg>
+			// 				<span>${i.hintContent}</span>
+			// 			</span>
+			// 			<span class="pharmacy-list-card__help">${i.location}</span>
+			// 			<a href="#" class="pharmacy-list-card__link pharmacy-list-card__link--mobile">Телефоны и график работы</a>
+			// 		</div>
+			// 		<div class="pharmacy-list-card__block">
+			// 			<div class="pharmacy-list-card__inner">
+			// 				<div class="pharmacy-list-card__schedule c-schedule">
+			// 					<span class="c-schedule__trigger">
+			// 						<span>${i.workTime[0]}</span>
+			// 						<span class="c-schedule__trigger-icon">
+			// 							<svg>
+			// 								<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-caret-sm"></use>
+			// 							</svg>
+			// 						</span>
+			// 					</span>
+			// 					<div class="c-schedule__dropdown">
+			// 						<ul class="c-schedule__list">
+			// 							${this.works.join('')}
+			// 						</ul>
+			// 					</div>
+			// 				</div>
+			// 				<a href="tel:${i.phones[0]}" class="pharmacy-list-card__phone">${i.phones[0]}</a>
+			// 			</div>
+			// 		</div>
+			// 		<div class="pharmacy-list-card__block">
+			// 			<div class="pharmacy-list-card__inner">
+			// 				<div class="pharmacy-list-card__group availability">
+			// 					<span class="pharmacy-list-card__status pharmacy-list-card__status--${i.stockColor}">
+			// 						<span>${i.stockText}</span>
+			// 						${this.tooltip}
+			// 					</span>
+			// 				</div>
+			// 				<a href="#" class="pharmacy-list-card__btn btn btn--light" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix}>Выбрать</a>
+			// 			</div>
+			// 		</div>
+			// 	</div>`;
+			// } else {
+			// 	this.itemHtml = ''
+			// }
+		} else {
+			if (i.stockColor == 'red') {
+				this.itemHtml = `<div class="pharmacy-list-card pharmacy-list__item pharmacy-item">
+					<div class="pharmacy-list-card__block">
+						<span class="pharmacy-list-card__name pharmacy-name">
+							<svg>
+								<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-${icon}"></use>
+							</svg>
+							<span>${i.hintContent}</span>
+						</span>
+						<span class="pharmacy-list-card__help pharmacy-address">${i.location}</span>
+						<a href="#" class="pharmacy-list-card__link pharmacy-list-card__link--mobile">Телефоны и график работы</a>
+					</div>
+					<div class="pharmacy-list-card__block">
+						<div class="pharmacy-list-card__inner">
+							<div class="pharmacy-list-card__schedule c-schedule">
+								<span class="c-schedule__trigger">
+									<span>${i.workTime[0]}</span>
+									<span class="c-schedule__trigger-icon">
+										<svg>
+											<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-caret-sm"></use>
+										</svg>
+									</span>
+								</span>
+								<div class="c-schedule__dropdown">
+									<ul class="c-schedule__list">
+										${this.works.join('')}
+									</ul>
+								</div>
+							</div>
+							<a href="tel:${i.phones[0]}" class="pharmacy-list-card__phone">${i.phones[0]}</a>
+						</div>
+					</div>
+					<div class="pharmacy-list-card__block">
+						<div class="pharmacy-list-card__inner">
+							<div class="pharmacy-list-card__group availability">
+								<span class="pharmacy-list-card__status pharmacy-list-card__status--${i.stockColor}">
+									<span>${i.stockText}</span>
+									${this.tooltip}
+								</span>
+							</div>
+							<a href="#" class="pharmacy-list-card__btn btn btn--light" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix} disabled>Выбрать</a>
+						</div>
+					</div>
+				</div>`;
+			} else {
+				this.itemHtml = `<div class="pharmacy-list-card pharmacy-list__item pharmacy-item">
+					<div class="pharmacy-list-card__block">
+						<span class="pharmacy-list-card__name pharmacy-name">
+							<svg>
+								<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-${icon}"></use>
+							</svg>
+							<span>${i.hintContent}</span>
+						</span>
+						<span class="pharmacy-list-card__help pharmacy-address">${i.location}</span>
+						<a href="#" class="pharmacy-list-card__link pharmacy-list-card__link--mobile">Телефоны и график работы</a>
+					</div>
+					<div class="pharmacy-list-card__block">
+						<div class="pharmacy-list-card__inner">
+							<div class="pharmacy-list-card__schedule c-schedule">
+								<span class="c-schedule__trigger">
+									<span>${i.workTime[0]}</span>
+									<span class="c-schedule__trigger-icon">
+										<svg>
+											<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-caret-sm"></use>
+										</svg>
+									</span>
+								</span>
+								<div class="c-schedule__dropdown">
+									<ul class="c-schedule__list">
+										${this.works.join('')}
+									</ul>
+								</div>
+							</div>
+							<a href="tel:${i.phones[0]}" class="pharmacy-list-card__phone">${i.phones[0]}</a>
+						</div>
+					</div>
+					<div class="pharmacy-list-card__block">
+						<div class="pharmacy-list-card__inner">
+							<div class="pharmacy-list-card__group availability">
+								<span class="pharmacy-list-card__status pharmacy-list-card__status--${i.stockColor}">
+									<span>${i.stockText}</span>
+									${this.tooltip}
+								</span>
+							</div>
+							<a href="#" class="pharmacy-list-card__btn btn btn--light" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix}>Выбрать</a>
+						</div>
+					</div>
+				</div>`;
+			}
+		}
 		
 		return this.itemHtml;
 	}
@@ -142,14 +333,13 @@
 	p.listArr = function (arr) {
 		var self = this;
 		this.list.innerHTML = '';
-		if(arr.length > 0) {
+		if (arr.length > 0) {
 			arr.forEach(item => {
 				this.list.innerHTML += self.listHtml(item);
 			});
 		} else {
 			this.list.innerHTML = '<div class="pharmacy-list__not-found">Нет аптек для вашего населенного пункта. Измените город пожалуйста.</div>';
 		}
-
 	}
 
 	p.listFilter = function (array) {
@@ -160,7 +350,7 @@
 		this.icons.forEach(icon => {
 			ymaps.option.presetStorage.add(`icon#${icon}`, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/sprite.svg#icon-' + icon,
+				iconImageHref: '../../local/templates/apte4ka/img/sprite.svg#icon-' + icon,
 				iconImageSize: this.iconImageSize,
 				iconImageOffset: this.iconImageOffset
 			});
@@ -168,23 +358,24 @@
 	}
 
 	p.customBalloon = function () {
-
 		this.customBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-            `<div class="c-map-balloon">
+            `<div class="c-map-balloon pharmacy-item">
                 <div class="c-map-balloon__top">
                     <svg class="c-map-balloon__icon">
-                        <use xlink:href="img/sprite.svg#icon-{{ properties.name }}"></use>
+                        <use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-{{ properties.icon }}"></use>
                     </svg>
                     <div class="c-map-balloon__group">
-                        <h4 class="c-map-balloon__title">{{ properties.hintContent }}</h4>
+                        <h4 class="c-map-balloon__title pharmacy-name">{{ properties.hintContent }}</h4>
                         <span class="c-map-balloon__status c-map-balloon__status--{{ properties.stockColor }}">{{ properties.stockText }}</span>
-                        <div class="c-map-balloon__values">
-                            <span class="c-map-balloon__value">Аптека: {{ properties.onPharmacyValue }} шт</span>
-                            <span class="c-map-balloon__value">Склад: {{ properties.onStockValue }} шт</span>
-                        </div>
+
+						{% if properties.stockVal %}
+							<div class="c-map-balloon__values">
+								<span class="c-map-balloon__value">Аптека: {{ properties.onPharmacyValue }} шт</span>
+							</div>
+						{% endif %}
                     </div>
                 </div>
-                <p class="c-map-balloon__description">{{ properties.location }}</p>
+                <p class="c-map-balloon__description pharmacy-address">{{ properties.location }}</p>
                 <div class="c-map-balloon__columns">
                     <div class="c-map-balloon__column">
                         <h4 class="c-map-balloon__subtitle">График работы</h4>
@@ -203,9 +394,10 @@
                         </ul>
                     </div>
                 </div>
-                <a href="#" class="c-map-balloon__btn btn" data-ext-id='{{ properties.ext }}' data-bitrix-id={{ properties.bitrix }}>зАБРАТЬ ЗДЕСЬ</a>
+				<a href="#" class="c-map-balloon__btn btn" data-ost="{{ properties.products }}" data-missing="{{ properties.missing }}" data-ext-id='{{ properties.ext }}' data-bitrix-id={{ properties.bitrix }} {% if properties.stockColor == 'red' %} disabled {% endif %}>ЗАБРАТЬ ЗДЕСЬ</a>
             </div>`
 		);
+		// <div class="flex justify-center" {% if properties.stockColor == 'red' %} style="display: none;" {% endif %}><a href="#" data-ost="{{ properties.products }}" data-missing="{{ properties.missing }}" data-ext-id='{{ properties.ext }}' data-bitrix-id={{ properties.bitrix }} class="btn btn-border-green btn-border-green-sm pharm_select">ЗАБРАТЬ ЗДЕСЬ</a></div></div>
 
 		this.objectManager.objects.options.set({
 			balloonContentLayout: this.customBalloonContentLayout,
@@ -221,6 +413,16 @@
 			clusterOpenBalloonOnClick: false
 		});
 		this.mapObject.geoObjects.add(this.objectManager);
+	}
+
+	p.stockUpdate = function () {
+		this.objects.features.forEach(item => {
+			var items_count_str = '';
+			for (var key in item.products) {
+				items_count_str += key + ':' + item.products[key]+';';
+			}
+			item.properties.products = items_count_str
+		})
 	}
 
 	p.updateObjectManager = function (obj) {
@@ -241,6 +443,42 @@
 		if(!this.mapContainer.classList.contains('loaded')) return;
 		this.objectManager.removeAll();
 		this.updateObjectManager(obj)
+	}
+
+	p.filterID = function (id) {
+		this.newObjects.type = "FeatureCollection"
+		this.newObjects.features = this.objects.features.filter(obj => {
+			if (obj.products[id] >= 1) {
+				obj.properties.stockColor = "green";
+				obj.properties.stockText = `В наличии`;
+				obj.properties.tooltipText = false;
+				obj.properties.stockVal = Math.floor(obj.products[id]);
+				//obj.properties.products = JSON.stringify(obj.products);
+				return true
+			}
+			return false
+		})
+
+		console.log(this.newObjects)
+
+		// this.filterStock.forEach(item => {
+		// 	if (item.dataset.stock !== 'in-stock') {
+		// 		item.style.display = 'none';
+		// 	} else {
+		// 		item.classList.add('is-active')
+		// 	}
+		// })
+
+		//document.querySelector('[data-stock="partial"]')
+		console.log(this.newObjects)
+		console.log(this.objects)
+
+		this.listFilter(this.newObjects)
+		this.mapUpdate(this.newObjects);
+	}
+
+	p.id = function (id) {
+		this.filterID(id)
 	}
 
 	p.filter = function (){
@@ -346,11 +584,12 @@
 
 		this.filterStock.forEach(item => {
 			item.addEventListener('click', function () {
-				self.filterBtnActive(this)
-				if (this.dataset.stock === 'all') {
-					self.filterStockData = ''
-				} else {
+				if(!$(this).parent().hasClass('is--active')) {
+					self.filterBtnActive(this)
 					self.filterStockData = this.dataset.stock
+				} else {
+					$(this).parent().removeClass('is--active')
+					self.filterStockData = ''
 				}
 				self.filter()
 			})
@@ -362,14 +601,18 @@
 		})
 
 		this.filterArea.forEach(item => {
-			item.addEventListener('click', function () {
-				if(!$(this).parent().hasClass('is--active')){
-					self.filterBtnActive(this)
-					self.filterAreaData = this.dataset.area
-				} else {
-					$(this).parent().removeClass('is--active')
-					self.filterAreaData = ''
-				}
+			item.addEventListener('click', function (event) {
+				event.preventDefault()
+				
+				self.filterAreaData = this.dataset.area
+				// if(!$(this).parent().hasClass('is--active')) {
+					
+				// 	// self.filterBtnActive(this)
+				// 	self.filterAreaData = this.dataset.area
+				// } else {
+				// 	// $(this).parent().removeClass('is--active')
+				// 	self.filterAreaData = ''
+				// }
 				self.filter()
 			})
 
@@ -379,11 +622,24 @@
 			})
 		})
 
+		// this.trigger.addEventListener('click', function(e) {
+		// 	e.preventDefault();
+
+		// 	console.log('main trigger')
+		// })
+
+		// this.editAddress.addEventListener('click', function(e) {
+		// 	e.preventDefault();
+
+		// 	console.log('edit address')
+		// })
+
 		this.showMap.addEventListener('click', function (e) {
 			e.preventDefault();
 
             const input = $(this).children('.switch__input')
 
+			console.log(input, input.is(':checked'))
             if (input.is(':checked')) {
                 input.prop('checked', false);
 
@@ -406,11 +662,15 @@
 			self.filterSearch(value)
 		})
 
-		// this.clear.addEventListener('click', function () {
-		// 	self.listFilter(self.objects)
-		// 	self.mapUpdate(self.objects)
-		// 	$('.btn-tab').removeClass('is-active')
-		// })
+		this.clear.addEventListener('click', function () {
+			setTimeout(() => {
+				self.listFilter(self.objects)
+				self.mapUpdate(self.objects)
+				// document.querySelectorAll('.desktop__select')
+				$('.pharmacy-list-sort__item').removeClass('is--active')
+				console.log('clear')
+			}, 150)
+		})
 	}
 
 	w.PMap = PMap;
