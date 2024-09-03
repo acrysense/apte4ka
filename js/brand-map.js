@@ -16,6 +16,7 @@
 		this.map = {};
 		this.mapObject = {};
 
+		this.addListeners();
         this.addYamapsScript();
 
 	};
@@ -83,11 +84,15 @@
 		this.icons.forEach(icon => {
 			ymaps.option.presetStorage.add(`icon#${icon}`, {
 				iconLayout: 'default#image',
-				iconImageHref: 'img/sprite.svg#icon-' + icon,
+				iconImageHref: '../../local/templates/apte4ka/img/sprite.svg#icon-' + icon,
 				iconImageSize: this.iconImageSize,
 				iconImageOffset: this.iconImageOffset
 			});
 		})
+	}
+
+	function isMobileDevice() {
+		return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
 	}
 
 	p.customBalloon = function () {
@@ -96,11 +101,16 @@
             `<div class="c-map-balloon">
                 <div class="c-map-balloon__top">
                     <svg class="c-map-balloon__icon">
-                        <use xlink:href="img/sprite.svg#icon-{{ properties.name }}"></use>
+                        <use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-{{ properties.name }}"></use>
                     </svg>
                     <div class="c-map-balloon__group">
                         <h4 class="c-map-balloon__title">{{ properties.hintContent }}</h4>
                     </div>
+					<button class="c-map-balloon__close">
+						<svg>
+							<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-close"></use>
+						</svg>
+					</button>
                 </div>
                 <p class="c-map-balloon__description">{{ properties.location }}</p>
                 <div class="c-map-balloon__columns">
@@ -128,6 +138,7 @@
 			balloonContentLayout: this.customBalloonContentLayout,
             balloonMaxWidth: 360,
 			balloonMinWidth: 360,
+			balloonAutoPan: isMobileDevice() ? false : true,
 		});
 	}
 
@@ -174,6 +185,18 @@
 			}
 			this.init = true
 		}
+	}
+
+	p.addListeners = function (){
+		var self = this;
+
+		this.mapContainer.addEventListener('click', function (event) {
+			if (event.target.classList.contains('c-map-balloon__close') || event.target.closest('.c-map-balloon__close')) {
+				event.preventDefault()
+
+				self.mapObject.balloon.close()
+			}
+		})
 	}
 
 	w.PMap = PMap;

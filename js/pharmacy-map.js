@@ -96,7 +96,7 @@
 		}
 
 		if ($('.pharmacy-list').hasClass('custom_address')) {
-			console.log('custom')
+			// console.log('custom')
 
 			var current_product = document.querySelector('.pharmacy-list').dataset.addressFor
 			var missing_items = i.missing;
@@ -140,7 +140,7 @@
 									<span>В наличии</span>
 								</span>
 							</div>
-							<a href="#" class="pharmacy-list-card__btn btn btn--light" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix}>Выбрать</a>
+							<a href="#" class="pharmacy-list-card__btn btn btn--light" data-stock="${i.delivery_date}" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix}>Выбрать</a>
 						</div>
 					</div>
 				</div>`;
@@ -183,7 +183,7 @@
 									<span>Нет в наличии</span>
 								</span>
 							</div>
-							<a href="#" class="pharmacy-list-card__btn btn btn--light" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix} disabled>Выбрать</a>
+							<a href="#" class="pharmacy-list-card__btn btn btn--light" data-stock="${i.delivery_date}" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix} disabled>Выбрать</a>
 						</div>
 					</div>
 				</div>`;
@@ -276,7 +276,7 @@
 									${this.tooltip}
 								</span>
 							</div>
-							<a href="#" class="pharmacy-list-card__btn btn btn--light" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix} disabled>Выбрать</a>
+							<a href="#" class="pharmacy-list-card__btn btn btn--light" data-stock="${i.delivery_date}" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix} disabled>Выбрать</a>
 						</div>
 					</div>
 				</div>`;
@@ -320,7 +320,7 @@
 									${this.tooltip}
 								</span>
 							</div>
-							<a href="#" class="pharmacy-list-card__btn btn btn--light" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix}>Выбрать</a>
+							<a href="#" class="pharmacy-list-card__btn btn btn--light" data-stock="${i.delivery_date}" data-ost="${items_count_str}" data-missing="${i.missing}" data-ext-id=${i.ext} data-bitrix-id=${i.bitrix}>Выбрать</a>
 						</div>
 					</div>
 				</div>`;
@@ -337,6 +337,25 @@
 			arr.forEach(item => {
 				this.list.innerHTML += self.listHtml(item);
 			});
+
+			const elements = document.querySelectorAll('.pharmacy-list__item');
+			const sorted = [...elements].sort((a, b) => {
+				const priceElA = a.querySelector('.pharmacy-list-card__status');
+				const priceElB = b.querySelector('.pharmacy-list-card__status');
+				function getPrice(el) {
+					if (el.classList.contains('pharmacy-list-card__status--green')) {
+						return Number(1000000)
+					} else if (el.classList.contains('pharmacy-list-card__status--yellow')) {
+						return Number(el.querySelector('span').innerHTML.split(' ')[2])
+					} else if (el.classList.contains('pharmacy-list-card__status--red')) {
+						return Number(0)
+					}
+				};
+				return getPrice(priceElB) - getPrice(priceElA);
+			});
+			const resultEl = document.querySelector('.pharmacy-list__wrapper');
+			resultEl.innerHTML = null;
+			sorted.forEach(el => resultEl.appendChild(el));
 		} else {
 			this.list.innerHTML = '<div class="pharmacy-list__not-found">Нет аптек для вашего населенного пункта. Измените город пожалуйста.</div>';
 		}
@@ -357,6 +376,10 @@
 		})
 	}
 
+	function isMobileDevice() {
+		return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+	}
+
 	p.customBalloon = function () {
 		this.customBalloonContentLayout = ymaps.templateLayoutFactory.createClass(
             `<div class="c-map-balloon pharmacy-item">
@@ -374,6 +397,11 @@
 							</div>
 						{% endif %}
                     </div>
+					<button class="c-map-balloon__close">
+						<svg>
+							<use xlink:href="../../local/templates/apte4ka/img/sprite.svg#icon-close"></use>
+						</svg>
+					</button>
                 </div>
                 <p class="c-map-balloon__description pharmacy-address">{{ properties.location }}</p>
                 <div class="c-map-balloon__columns">
@@ -395,14 +423,20 @@
                     </div>
                 </div>
 				<a href="#" class="c-map-balloon__btn btn" data-ost="{{ properties.products }}" data-missing="{{ properties.missing }}" data-ext-id='{{ properties.ext }}' data-bitrix-id={{ properties.bitrix }} {% if properties.stockColor == 'red' %} disabled {% endif %}>ЗАБРАТЬ ЗДЕСЬ</a>
-            </div>`
-		);
-		// <div class="flex justify-center" {% if properties.stockColor == 'red' %} style="display: none;" {% endif %}><a href="#" data-ost="{{ properties.products }}" data-missing="{{ properties.missing }}" data-ext-id='{{ properties.ext }}' data-bitrix-id={{ properties.bitrix }} class="btn btn-border-green btn-border-green-sm pharm_select">ЗАБРАТЬ ЗДЕСЬ</a></div></div>
+            </div>`, {
+				onCloseClick: function (e) {
+						e.preventDefault();
 
+						this.events.fire('userclose');
+				},
+		}
+		);
+		
 		this.objectManager.objects.options.set({
 			balloonContentLayout: this.customBalloonContentLayout,
-            balloonMaxWidth: 360,
+			balloonMaxWidth: 360,
 			balloonMinWidth: 360,
+			balloonAutoPan: isMobileDevice() ? false : true,
 		});
 	}
 
@@ -459,7 +493,7 @@
 			return false
 		})
 
-		console.log(this.newObjects)
+		// console.log(this.newObjects)
 
 		// this.filterStock.forEach(item => {
 		// 	if (item.dataset.stock !== 'in-stock') {
@@ -470,8 +504,8 @@
 		// })
 
 		//document.querySelector('[data-stock="partial"]')
-		console.log(this.newObjects)
-		console.log(this.objects)
+		// console.log(this.newObjects)
+		// console.log(this.objects)
 
 		this.listFilter(this.newObjects)
 		this.mapUpdate(this.newObjects);
@@ -487,7 +521,7 @@
 			stock: this.filterStockData,
 			area: this.filterAreaData
 		}
-		console.log(filter)
+		// console.log(filter)
 		this.newObjects.type = "FeatureCollection"
 		this.newObjects.features = this.objects.features.filter(obj => {
 			if (filter.type && filter.stock && filter.area) {
@@ -639,7 +673,6 @@
 
             const input = $(this).children('.switch__input')
 
-			console.log(input, input.is(':checked'))
             if (input.is(':checked')) {
                 input.prop('checked', false);
 
@@ -668,8 +701,17 @@
 				self.mapUpdate(self.objects)
 				// document.querySelectorAll('.desktop__select')
 				$('.pharmacy-list-sort__item').removeClass('is--active')
-				console.log('clear')
+				// console.log('clear')
 			}, 150)
+		})
+
+		this.mapContainer.addEventListener('click', function (event) {
+			// console.log(event.target)
+			if (event.target.classList.contains('c-map-balloon__close') || event.target.closest('.c-map-balloon__close')) {
+				event.preventDefault()
+
+				self.mapObject.balloon.close()
+			}
 		})
 	}
 
