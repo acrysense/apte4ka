@@ -32,7 +32,7 @@
 					<div class="c-location header__location">
 						<a href="#" class="c-location__trigger city-selection-btn">
 							<svg>
-								<use xlink:href="img/sprite.svg#icon-location"></use>
+								<use xlink:href="img/sprite.svg#icon-location-filled"></use>
 							</svg>
 							<span>Витебск</span>
 						</a>
@@ -94,7 +94,7 @@
 								<span class="hamburger__inner"></span>
 								<span class="hamburger__inner"></span>
 							</button>
-							<a href="index.html" class="header__logotype header__logotype--vseleki">
+							<a href="index.html" class="header__logotype header__logotype--apte4ka">
 								<img src="img/logotype.svg" width="238" height="40" alt="vse-leki.by">
 							</a>
 							<div class="c-catalog header__catalog">
@@ -2021,10 +2021,18 @@
 									</div>
 								</div>
 							</div>
+							<a href="#" class="c-basket header__user">
+								<div class="c-basket__group">
+									<svg class="c-basket__icon">
+										<use xlink:href="img/sprite.svg#icon-user"></use>
+									</svg>
+									<span class="c-basket__title">Кабинет</span>
+								</div>
+							</a>
 							<a href="#" class="c-basket header__basket">
 								<div class="c-basket__group">
 									<svg class="c-basket__icon">
-										<use xlink:href="img/sprite.svg#icon-basket"></use>
+										<use xlink:href="img/sprite.svg#icon-basket-stroke-new"></use>
 									</svg>
 									<span class="c-basket__title">Корзина</span>
 								</div>
@@ -2091,7 +2099,7 @@
 							<a href="#" class="page-top__link">Очистить корзину</a>
 						</div>
 					</div>
-					<div class="basket__wrap">
+					<div class="basket__wrap basket__wrap--grid">
 						<div class="basket__left">
 							<a href="#" class="basket__media is--desktop">
 								<img src="img/catalog-banner-01.jpg" alt="Image">
@@ -2281,249 +2289,253 @@
 								</form>
 							</div>
 						</div>
-					</div>
-				</div>
-			</section>
-			<!-- end of basket -->
-			<!-- similar products content -->
-			<section class="similar-products-content section-indent" id="similar-products-content">
-				<div class="container">
-					<div class="similar-products-content__slider">
-						<div class="similar-products-content__top">
-							<h3 class="similar-products-content__title">Не забудьте добавить к заказу</h3>
-							<div class="swiper-controls similar-products-content__slider-controls">
-								<button class="swiper-button-prev" aria-label="Назад">
-									<svg class="swiper-button-icon">
-										<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
-									</svg>
-								</button>
-								<button class="swiper-button-next" aria-label="Далее">
-									<svg class="swiper-button-icon">
-										<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
-									</svg>
-								</button>
-							</div>
-						</div>
-						<div class="similar-products-content__slider-wrapper">
-							<div class="swiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<article class="catalog-card similar-products-content__item">
-											<a href="#" class="catalog-card__img">
-												<img src="img/catalog-01.png" alt="Image">
-												<div class="catalog-card__statuses">
-													<span class="catalog-card__status catalog-card__status--orange">Акция</span>
-													<span class="catalog-card__status catalog-card__status--indigo">Новинка</span>
-													<span class="catalog-card__status catalog-card__status--pink">Рекомендуем</span>
-													<span class="catalog-card__status">Хит</span>
-												</div>
-											</a>
-											<div class="catalog-card__body">
-												<div class="catalog-card__group">
-													<div class="catalog-card__prices">
-														<span class="catalog-card__price catalog-card__price--red"><span>8.09</span> руб.</span>
-														<span class="catalog-card__price catalog-card__price--old"><span>11.20</span> руб.</span>
-													</div>
-													<a href="#" class="catalog-card__description">МЕГАСЕФ (пор. д/приг. р-ра д/ин. 750 мг во фл. в комп. с раствор. (вода д/инъекций в амп. 6 мл) №1) Nobelfarma Ilac Sanayii ve Ticaret A.S.-Турция</a>
-													<span class="catalog-card__note">По рецепту</span>
-												</div>
-												<div class="catalog-card__group">
-													<div class="catalog-card__controls">
-														<div class="c-quantity catalog-card__quantity">
-															<div class="c-quantity__inner">
-																<button class="c-quantity__btn c-quantity__btn--minus">-</button>
-																<input type="number" class="c-quantity__value" value="1">
-																<button class="c-quantity__btn c-quantity__btn--plus">+</button>
-															</div>
+						<div class="similar-products-content similar-products-content--bg basket__similar-products" id="similar-products-content">
+							<div class="similar-products-content__slider similar-products-content__slider--short">
+								<div class="similar-products-content__top">
+									<h3 class="similar-products-content__title">Не забудьте добавить к заказу</h3>
+								</div>
+								<div class="similar-products-content__slider-wrapper">
+									<div class="swiper">
+										<div class="swiper-wrapper">
+											<div class="swiper-slide">
+												<article class="catalog-card similar-products-content__item">
+													<a href="#" class="catalog-card__img">
+														<img src="img/catalog-01.png" alt="Image">
+														<div class="catalog-card__statuses">
+															<span class="catalog-card__status catalog-card__status--orange">Акция</span>
+															<span class="catalog-card__status catalog-card__status--indigo">Новинка</span>
+															<span class="catalog-card__status catalog-card__status--pink">Рекомендуем</span>
+															<span class="catalog-card__status">Хит</span>
 														</div>
-														<a href="#" class="catalog-card__btn btn btn--sm-desktop btn--red">В корзине</a>
-													</div>
-													<span class="catalog-card__help">Беларусь</span>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="swiper-slide">
-										<article class="catalog-card similar-products-content__item">
-											<a href="#" class="catalog-card__img">
-												<img src="img/catalog-03.png" alt="Image">
-												<div class="catalog-card__statuses"></div>
-											</a>
-											<div class="catalog-card__body">
-												<div class="catalog-card__group">
-													<div class="catalog-card__prices">
-														<span class="catalog-card__price"><span>3.66</span> руб.</span>
-													</div>
-													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
-													<span class="catalog-card__note is--active">По рецепту</span>
-												</div>
-												<div class="catalog-card__group">
-													<div class="catalog-card__controls">
-														<a href="#" class="catalog-card__btn btn">В корзину</a>
-													</div>
-													<span class="catalog-card__help">Беларусь</span>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="swiper-slide">
-										<article class="catalog-card similar-products-content__item">
-											<a href="#" class="catalog-card__img">
-												<img src="img/catalog-03.png" alt="Image">
-												<div class="catalog-card__statuses"></div>
-											</a>
-											<div class="catalog-card__body">
-												<div class="catalog-card__group">
-													<div class="catalog-card__prices">
-														<span class="catalog-card__price"><span>3.66</span> руб.</span>
-													</div>
-													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
-													<span class="catalog-card__note is--active">По рецепту</span>
-												</div>
-												<div class="catalog-card__group">
-													<div class="catalog-card__controls">
-														<a href="#" class="catalog-card__btn btn">В корзину</a>
-													</div>
-													<span class="catalog-card__help">Беларусь</span>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="swiper-slide">
-										<article class="catalog-card similar-products-content__item">
-											<a href="#" class="catalog-card__img">
-												<img src="img/catalog-03.png" alt="Image">
-												<div class="catalog-card__statuses"></div>
-											</a>
-											<div class="catalog-card__body">
-												<div class="catalog-card__group">
-													<div class="catalog-card__prices">
-														<span class="catalog-card__price"><span>3.66</span> руб.</span>
-													</div>
-													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
-													<span class="catalog-card__note is--active">По рецепту</span>
-												</div>
-												<div class="catalog-card__group">
-													<div class="catalog-card__controls">
-														<a href="#" class="catalog-card__btn btn">В корзину</a>
-													</div>
-													<span class="catalog-card__help">Беларусь</span>
-												</div>
-											</div>
-										</article>
-									</div>
-									<div class="swiper-slide">
-										<article class="catalog-card similar-products-content__item">
-											<a href="#" class="catalog-card__img">
-												<img src="img/catalog-01.png" alt="Image">
-												<div class="catalog-card__statuses">
-													<span class="catalog-card__status catalog-card__status--orange">Акция</span>
-													<span class="catalog-card__status catalog-card__status--indigo">Новинка</span>
-													<span class="catalog-card__status catalog-card__status--pink">Рекомендуем</span>
-													<span class="catalog-card__status">Хит</span>
-												</div>
-											</a>
-											<div class="catalog-card__body">
-												<div class="catalog-card__group">
-													<div class="catalog-card__prices">
-														<span class="catalog-card__price catalog-card__price--red"><span>8.09</span> руб.</span>
-														<span class="catalog-card__price catalog-card__price--old"><span>11.20</span> руб.</span>
-													</div>
-													<a href="#" class="catalog-card__description">МЕГАСЕФ (пор. д/приг. р-ра д/ин. 750 мг во фл. в комп. с раствор. (вода д/инъекций в амп. 6 мл) №1) Nobelfarma Ilac Sanayii ve Ticaret A.S.-Турция</a>
-													<span class="catalog-card__note">По рецепту</span>
-												</div>
-												<div class="catalog-card__group">
-													<div class="catalog-card__controls">
-														<div class="c-quantity catalog-card__quantity">
-															<div class="c-quantity__inner">
-																<button class="c-quantity__btn c-quantity__btn--minus">-</button>
-																<input type="number" class="c-quantity__value" value="1">
-																<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+													</a>
+													<div class="catalog-card__body">
+														<div class="catalog-card__group">
+															<div class="catalog-card__prices">
+																<span class="catalog-card__price catalog-card__price--red"><span>8.09</span> руб.</span>
+																<span class="catalog-card__price catalog-card__price--old"><span>11.20</span> руб.</span>
 															</div>
+															<a href="#" class="catalog-card__description">МЕГАСЕФ (пор. д/приг. р-ра д/ин. 750 мг во фл. в комп. с раствор. (вода д/инъекций в амп. 6 мл) №1) Nobelfarma Ilac Sanayii ve Ticaret A.S.-Турция</a>
+															<span class="catalog-card__note">По рецепту</span>
 														</div>
-														<a href="#" class="catalog-card__btn btn btn--sm-desktop btn--red">В корзине</a>
+														<div class="catalog-card__group">
+															<div class="catalog-card__controls">
+																<div class="c-quantity catalog-card__quantity">
+																	<div class="c-quantity__inner">
+																		<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+																		<input type="number" class="c-quantity__value" value="1">
+																		<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+																	</div>
+																</div>
+																<a href="#" class="catalog-card__btn btn btn--sm btn--icon-mob btn--red">
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-basket"></use>
+																	</svg>
+																	<span>В корзине</span>
+																</a>
+															</div>
+															<span class="catalog-card__help">Беларусь</span>
+														</div>
 													</div>
-													<span class="catalog-card__help">Беларусь</span>
-												</div>
+												</article>
 											</div>
-										</article>
-									</div>
-									<div class="swiper-slide">
-										<article class="catalog-card similar-products-content__item">
-											<a href="#" class="catalog-card__img">
-												<img src="img/catalog-03.png" alt="Image">
-												<div class="catalog-card__statuses"></div>
-											</a>
-											<div class="catalog-card__body">
-												<div class="catalog-card__group">
-													<div class="catalog-card__prices">
-														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+											<div class="swiper-slide">
+												<article class="catalog-card similar-products-content__item">
+													<a href="#" class="catalog-card__img">
+														<img src="img/catalog-03.png" alt="Image">
+														<div class="catalog-card__statuses"></div>
+													</a>
+													<div class="catalog-card__body">
+														<div class="catalog-card__group">
+															<div class="catalog-card__prices">
+																<span class="catalog-card__price"><span>3.66</span> руб.</span>
+															</div>
+															<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+															<span class="catalog-card__note is--active">По рецепту</span>
+														</div>
+														<div class="catalog-card__group">
+															<div class="catalog-card__controls">
+																<a href="#" class="catalog-card__btn btn">В корзину</a>
+															</div>
+															<span class="catalog-card__help">Беларусь</span>
+														</div>
 													</div>
-													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
-													<span class="catalog-card__note is--active">По рецепту</span>
-												</div>
-												<div class="catalog-card__group">
-													<div class="catalog-card__controls">
-														<a href="#" class="catalog-card__btn btn">В корзину</a>
-													</div>
-													<span class="catalog-card__help">Беларусь</span>
-												</div>
+												</article>
 											</div>
-										</article>
-									</div>
-									<div class="swiper-slide">
-										<article class="catalog-card similar-products-content__item">
-											<a href="#" class="catalog-card__img">
-												<img src="img/catalog-03.png" alt="Image">
-												<div class="catalog-card__statuses"></div>
-											</a>
-											<div class="catalog-card__body">
-												<div class="catalog-card__group">
-													<div class="catalog-card__prices">
-														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+											<div class="swiper-slide">
+												<article class="catalog-card similar-products-content__item">
+													<a href="#" class="catalog-card__img">
+														<img src="img/catalog-03.png" alt="Image">
+														<div class="catalog-card__statuses"></div>
+													</a>
+													<div class="catalog-card__body">
+														<div class="catalog-card__group">
+															<div class="catalog-card__prices">
+																<span class="catalog-card__price"><span>3.66</span> руб.</span>
+															</div>
+															<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+															<span class="catalog-card__note is--active">По рецепту</span>
+														</div>
+														<div class="catalog-card__group">
+															<div class="catalog-card__controls">
+																<a href="#" class="catalog-card__btn btn">В корзину</a>
+															</div>
+															<span class="catalog-card__help">Беларусь</span>
+														</div>
 													</div>
-													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
-													<span class="catalog-card__note is--active">По рецепту</span>
-												</div>
-												<div class="catalog-card__group">
-													<div class="catalog-card__controls">
-														<a href="#" class="catalog-card__btn btn">В корзину</a>
-													</div>
-													<span class="catalog-card__help">Беларусь</span>
-												</div>
+												</article>
 											</div>
-										</article>
-									</div>
-									<div class="swiper-slide">
-										<article class="catalog-card similar-products-content__item">
-											<a href="#" class="catalog-card__img">
-												<img src="img/catalog-03.png" alt="Image">
-												<div class="catalog-card__statuses"></div>
-											</a>
-											<div class="catalog-card__body">
-												<div class="catalog-card__group">
-													<div class="catalog-card__prices">
-														<span class="catalog-card__price"><span>3.66</span> руб.</span>
+											<div class="swiper-slide">
+												<article class="catalog-card similar-products-content__item">
+													<a href="#" class="catalog-card__img">
+														<img src="img/catalog-03.png" alt="Image">
+														<div class="catalog-card__statuses"></div>
+													</a>
+													<div class="catalog-card__body">
+														<div class="catalog-card__group">
+															<div class="catalog-card__prices">
+																<span class="catalog-card__price"><span>3.66</span> руб.</span>
+															</div>
+															<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+															<span class="catalog-card__note is--active">По рецепту</span>
+														</div>
+														<div class="catalog-card__group">
+															<div class="catalog-card__controls">
+																<a href="#" class="catalog-card__btn btn">В корзину</a>
+															</div>
+															<span class="catalog-card__help">Беларусь</span>
+														</div>
 													</div>
-													<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
-													<span class="catalog-card__note is--active">По рецепту</span>
-												</div>
-												<div class="catalog-card__group">
-													<div class="catalog-card__controls">
-														<a href="#" class="catalog-card__btn btn">В корзину</a>
-													</div>
-													<span class="catalog-card__help">Беларусь</span>
-												</div>
+												</article>
 											</div>
-										</article>
+											<div class="swiper-slide">
+												<article class="catalog-card similar-products-content__item">
+													<a href="#" class="catalog-card__img">
+														<img src="img/catalog-01.png" alt="Image">
+														<div class="catalog-card__statuses">
+															<span class="catalog-card__status catalog-card__status--orange">Акция</span>
+															<span class="catalog-card__status catalog-card__status--indigo">Новинка</span>
+															<span class="catalog-card__status catalog-card__status--pink">Рекомендуем</span>
+															<span class="catalog-card__status">Хит</span>
+														</div>
+													</a>
+													<div class="catalog-card__body">
+														<div class="catalog-card__group">
+															<div class="catalog-card__prices">
+																<span class="catalog-card__price catalog-card__price--red"><span>8.09</span> руб.</span>
+																<span class="catalog-card__price catalog-card__price--old"><span>11.20</span> руб.</span>
+															</div>
+															<a href="#" class="catalog-card__description">МЕГАСЕФ (пор. д/приг. р-ра д/ин. 750 мг во фл. в комп. с раствор. (вода д/инъекций в амп. 6 мл) №1) Nobelfarma Ilac Sanayii ve Ticaret A.S.-Турция</a>
+															<span class="catalog-card__note">По рецепту</span>
+														</div>
+														<div class="catalog-card__group">
+															<div class="catalog-card__controls">
+																<div class="c-quantity catalog-card__quantity">
+																	<div class="c-quantity__inner">
+																		<button class="c-quantity__btn c-quantity__btn--minus">-</button>
+																		<input type="number" class="c-quantity__value" value="1">
+																		<button class="c-quantity__btn c-quantity__btn--plus">+</button>
+																	</div>
+																</div>
+																<a href="#" class="catalog-card__btn btn btn--sm btn--icon-mob btn--red">
+																	<svg>
+																		<use xlink:href="img/sprite.svg#icon-basket"></use>
+																	</svg>
+																	<span>В корзине</span>
+																</a>
+															</div>
+															<span class="catalog-card__help">Беларусь</span>
+														</div>
+													</div>
+												</article>
+											</div>
+											<div class="swiper-slide">
+												<article class="catalog-card similar-products-content__item">
+													<a href="#" class="catalog-card__img">
+														<img src="img/catalog-03.png" alt="Image">
+														<div class="catalog-card__statuses"></div>
+													</a>
+													<div class="catalog-card__body">
+														<div class="catalog-card__group">
+															<div class="catalog-card__prices">
+																<span class="catalog-card__price"><span>3.66</span> руб.</span>
+															</div>
+															<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+															<span class="catalog-card__note is--active">По рецепту</span>
+														</div>
+														<div class="catalog-card__group">
+															<div class="catalog-card__controls">
+																<a href="#" class="catalog-card__btn btn">В корзину</a>
+															</div>
+															<span class="catalog-card__help">Беларусь</span>
+														</div>
+													</div>
+												</article>
+											</div>
+											<div class="swiper-slide">
+												<article class="catalog-card similar-products-content__item">
+													<a href="#" class="catalog-card__img">
+														<img src="img/catalog-03.png" alt="Image">
+														<div class="catalog-card__statuses"></div>
+													</a>
+													<div class="catalog-card__body">
+														<div class="catalog-card__group">
+															<div class="catalog-card__prices">
+																<span class="catalog-card__price"><span>3.66</span> руб.</span>
+															</div>
+															<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+															<span class="catalog-card__note is--active">По рецепту</span>
+														</div>
+														<div class="catalog-card__group">
+															<div class="catalog-card__controls">
+																<a href="#" class="catalog-card__btn btn">В корзину</a>
+															</div>
+															<span class="catalog-card__help">Беларусь</span>
+														</div>
+													</div>
+												</article>
+											</div>
+											<div class="swiper-slide">
+												<article class="catalog-card similar-products-content__item">
+													<a href="#" class="catalog-card__img">
+														<img src="img/catalog-03.png" alt="Image">
+														<div class="catalog-card__statuses"></div>
+													</a>
+													<div class="catalog-card__body">
+														<div class="catalog-card__group">
+															<div class="catalog-card__prices">
+																<span class="catalog-card__price"><span>3.66</span> руб.</span>
+															</div>
+															<a href="#" class="catalog-card__description">АМПИЦИЛЛИНА ТРИГИДРАТ (табл. 250 мг №10х2) Белмедпрепараты РУП-Беларусь</a>
+															<span class="catalog-card__note is--active">По рецепту</span>
+														</div>
+														<div class="catalog-card__group">
+															<div class="catalog-card__controls">
+																<a href="#" class="catalog-card__btn btn">В корзину</a>
+															</div>
+															<span class="catalog-card__help">Беларусь</span>
+														</div>
+													</div>
+												</article>
+											</div>
+										</div>
 									</div>
+									<button class="swiper-button-prev" aria-label="Назад">
+										<svg class="swiper-button-icon">
+											<use xlink:href="img/sprite.svg#icon-arrow-prev"></use>
+										</svg>
+									</button>
+									<button class="swiper-button-next" aria-label="Далее">
+										<svg class="swiper-button-icon">
+											<use xlink:href="img/sprite.svg#icon-arrow-next"></use>
+										</svg>
+									</button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-			<!-- end of similar products content -->
+			<!-- end of basket -->
 		</div>
 		<!-- end of content -->
 		<!-- footer -->
@@ -2781,8 +2793,20 @@
 				<div class="mobile-menu__scroll">
 					<div class="mobile-menu__wrapper">
 						<div class="mobile-menu__block">
-							<a href="#" class="mobile-menu__btn mobile-menu__btn--orange btn">Товары на акции</a>
-							<a href="#" class="mobile-menu__btn mobile-menu__btn--green mobile-menu__btn--catalog btn">Каталог товаров</a>
+							<div class="mobile-menu__btns">
+								<a href="#" class="mobile-menu__btn mobile-menu__btn--green mobile-menu__btn--catalog btn">
+									<svg>
+										<use xlink:href="img/sprite.svg#icon-catalog-square"></use>
+									</svg>
+									<span>Каталог товаров</span>
+								</a>
+								<a href="#" class="mobile-menu__btn mobile-menu__btn--orange btn">
+									<svg>
+										<use xlink:href="img/sprite.svg#icon-discount-stroke"></use>
+									</svg>
+									<span>Товары на акции</span>
+								</a>
+							</div>
 						</div>
 						<div class="mobile-menu__block">
 							<ul class="mobile-menu__list">
@@ -2820,31 +2844,32 @@
 								</li>
 							</ul>
 						</div>
-						<div class="mobile-menu__block">
-							<div class="c-mobile-location mobile-menu__location">
-								<div class="c-mobile-location__wrapper">
-									<div class="c-mobile-location__city">
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-location"></use>
-										</svg>
-										<span>Минск</span>
-									</div>
-									<a href="#" class="c-mobile-location__link city-selection-btn">Изменить город</a>
-								</div>
-							</div>
-						</div>
+						<!-- <div class="mobile-menu__block">
+                        <div class="c-mobile-location mobile-menu__location">
+                            <div class="c-mobile-location__wrapper">
+                                <div class="c-mobile-location__city">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-location"></use>
+                                    </svg>
+                                    <span>Минск</span>
+                                </div>
+                                <a href="#" class="c-mobile-location__link city-selection-btn">Изменить город</a>
+                            </div>
+                        </div>
+                    </div> -->
 					</div>
 					<div class="mobile-menu__bottom">
-						<div class="c-new-number mobile-menu__number">
-							<a href="tel:6838787" class="c-new-number__link">
-								<svg>
-									<use xlink:href="img/sprite.svg#icon-phone"></use>
-								</svg>
-								<b>683-87-87</b>
-								<span>(MTC, A1, Life)</span>
-							</a>
-							<p class="c-new-number__help">Аптека №25 пятой категории ООО "Аптека групп Центр</p>
-						</div>
+						<!-- <div class="c-new-number mobile-menu__number">
+                        <a href="tel:6838787" class="c-new-number__link">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-phone"></use>
+                            </svg>
+                            <b>683-87-87</b>
+                            <span>(MTC, A1, Life)</span>
+                        </a>
+                        <p class="c-new-number__help">Аптека №25 пятой категории ООО "Аптека групп Центр</p>
+                    </div> -->
+						<p class="mobile-menu__copyright">Аптека №25 пятой категории ООО "Аптека групп Центр</p>
 					</div>
 				</div>
 			</div>

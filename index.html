@@ -46,7 +46,7 @@
 					<div class="c-location header__location">
 						<a href="#" class="c-location__trigger city-selection-btn">
 							<svg>
-								<use xlink:href="img/sprite.svg#icon-location"></use>
+								<use xlink:href="img/sprite.svg#icon-location-filled"></use>
 							</svg>
 							<span>Витебск</span>
 						</a>
@@ -108,7 +108,7 @@
 								<span class="hamburger__inner"></span>
 								<span class="hamburger__inner"></span>
 							</button>
-							<a href="index.html" class="header__logotype header__logotype--vseleki">
+							<a href="index.html" class="header__logotype header__logotype--apte4ka">
 								<img src="img/logotype.svg" width="238" height="40" alt="vse-leki.by">
 							</a>
 							<div class="c-catalog header__catalog">
@@ -2035,10 +2035,18 @@
 									</div>
 								</div>
 							</div>
+							<a href="#" class="c-basket header__user">
+								<div class="c-basket__group">
+									<svg class="c-basket__icon">
+										<use xlink:href="img/sprite.svg#icon-user"></use>
+									</svg>
+									<span class="c-basket__title">Кабинет</span>
+								</div>
+							</a>
 							<a href="#" class="c-basket header__basket">
 								<div class="c-basket__group">
 									<svg class="c-basket__icon">
-										<use xlink:href="img/sprite.svg#icon-basket"></use>
+										<use xlink:href="img/sprite.svg#icon-basket-stroke-new"></use>
 									</svg>
 									<span class="c-basket__title">Корзина</span>
 								</div>
@@ -2532,8 +2540,20 @@
 				<div class="mobile-menu__scroll">
 					<div class="mobile-menu__wrapper">
 						<div class="mobile-menu__block">
-							<a href="#" class="mobile-menu__btn mobile-menu__btn--orange btn">Товары на акции</a>
-							<a href="#" class="mobile-menu__btn mobile-menu__btn--green mobile-menu__btn--catalog btn">Каталог товаров</a>
+							<div class="mobile-menu__btns">
+								<a href="#" class="mobile-menu__btn mobile-menu__btn--green mobile-menu__btn--catalog btn">
+									<svg>
+										<use xlink:href="img/sprite.svg#icon-catalog-square"></use>
+									</svg>
+									<span>Каталог товаров</span>
+								</a>
+								<a href="#" class="mobile-menu__btn mobile-menu__btn--orange btn">
+									<svg>
+										<use xlink:href="img/sprite.svg#icon-discount-stroke"></use>
+									</svg>
+									<span>Товары на акции</span>
+								</a>
+							</div>
 						</div>
 						<div class="mobile-menu__block">
 							<ul class="mobile-menu__list">
@@ -2571,31 +2591,32 @@
 								</li>
 							</ul>
 						</div>
-						<div class="mobile-menu__block">
-							<div class="c-mobile-location mobile-menu__location">
-								<div class="c-mobile-location__wrapper">
-									<div class="c-mobile-location__city">
-										<svg>
-											<use xlink:href="img/sprite.svg#icon-location"></use>
-										</svg>
-										<span>Минск</span>
-									</div>
-									<a href="#" class="c-mobile-location__link city-selection-btn">Изменить город</a>
-								</div>
-							</div>
-						</div>
+						<!-- <div class="mobile-menu__block">
+                        <div class="c-mobile-location mobile-menu__location">
+                            <div class="c-mobile-location__wrapper">
+                                <div class="c-mobile-location__city">
+                                    <svg>
+                                        <use xlink:href="img/sprite.svg#icon-location"></use>
+                                    </svg>
+                                    <span>Минск</span>
+                                </div>
+                                <a href="#" class="c-mobile-location__link city-selection-btn">Изменить город</a>
+                            </div>
+                        </div>
+                    </div> -->
 					</div>
 					<div class="mobile-menu__bottom">
-						<div class="c-new-number mobile-menu__number">
-							<a href="tel:6838787" class="c-new-number__link">
-								<svg>
-									<use xlink:href="img/sprite.svg#icon-phone"></use>
-								</svg>
-								<b>683-87-87</b>
-								<span>(MTC, A1, Life)</span>
-							</a>
-							<p class="c-new-number__help">Аптека №25 пятой категории ООО "Аптека групп Центр</p>
-						</div>
+						<!-- <div class="c-new-number mobile-menu__number">
+                        <a href="tel:6838787" class="c-new-number__link">
+                            <svg>
+                                <use xlink:href="img/sprite.svg#icon-phone"></use>
+                            </svg>
+                            <b>683-87-87</b>
+                            <span>(MTC, A1, Life)</span>
+                        </a>
+                        <p class="c-new-number__help">Аптека №25 пятой категории ООО "Аптека групп Центр</p>
+                    </div> -->
+						<p class="mobile-menu__copyright">Аптека №25 пятой категории ООО "Аптека групп Центр</p>
 					</div>
 				</div>
 			</div>
